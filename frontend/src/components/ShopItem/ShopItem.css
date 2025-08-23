@@ -1,0 +1,261 @@
+.shop-item{
+	width: 100%;
+	margin: auto;
+	border-radius: 15px;
+	box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+	transition: 0.3s;
+	animation: fadeIn 1s;
+}
+
+.shop-item-image{
+	width: 100%; /* Ширина контейнера */
+	height: 240px;
+    object-fit: cover; 
+	border-radius: 15px;
+}
+
+.shop-item-info{
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/*.shop-item-name-rating{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.shop-item-name-rating p{
+	font-size: 25px;
+	font-weight: bold;
+}*/
+
+.shop-item-name-rating {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+	width: 100%; /* Обеспечивает использование всей доступной ширины */
+	overflow: hidden; /* Скрывает переполненный текст */
+}
+
+.shop-name {
+	font-family: "Lazurski";
+	font-weight: normal;
+	font-size: 48px;
+}
+  
+.shop-item-name-rating p {
+	font-size: 25px;
+	font-weight: bold;
+	white-space: nowrap; /* Запрещает перенос строки */
+	overflow: hidden; /* Обрезает текст, если он не помещается */
+	text-overflow: ellipsis; /* Добавляет многоточие, если текст слишком длинный */
+	max-width: 100%; /* Ограничивает ширину */
+}
+
+.shop-item-name-rating img{
+	width: 70px;
+}
+
+.shop-item-work{
+	color: #676767;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.shop-item-address{
+	color: #676767;
+	font-size: 15px;
+	font-weight: 500;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.shop-item-delivery{
+	color: #676767;
+	font-family: "Lazurski";
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.shop-item-img-container{
+	position: relative;
+}
+
+.shop-item-img-container .add{
+	width: 35px;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.shop-item-counter{
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 6px;
+	border-radius: 50px;
+	background-color: white;
+}
+
+.shop-item-counter img{
+	width: 30px;
+}
+
+.shop-get-item-button{
+	background: transparent;
+	font-size: 12px;
+	color: #49557e;
+	border: 1px solid tomato;
+	padding: 10px 20px;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.star_logo{
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.time-icon {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+.shop-item-raiting{
+	color: #676767;
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.shop-item-status {
+	font-family: "Lazurski";
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+  
+.shop-item-status.open {
+	color: green; /* Зеленый цвет для "Открыто" */
+}
+  
+.shop-item-status.closed {
+	color: red; /* Красный цвет для "Закрыто" */
+}
+
+.slider-info {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
+}
+
+.slider-info::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.shop-item-delivery{
+	font-weight: 800;
+	color: black;
+}
+
+
+@media(max-width:1200px) {
+	.shop-item{
+		width: 100%;
+	}
+
+	.shop-item-name-rating p{
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.shop-item-work{
+		color: #676767;
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+
+	.time-icon {
+		width: 15px;
+		height: 15px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.star_logo{
+		width: 15px;
+		height: 15px;
+		margin-right: 10px;
+	}
+
+	.shop-item-raiting{
+		font-size: 15px;
+	}
+
+	.shop-item-button{
+		background: transparent;
+		font-size: 1vh;
+		padding: 8px 10px;
+	}
+}
+
+@media(max-width:768px) {
+	.shop-item{
+		max-width: 250px;
+	}
+
+	.shop-item-image{
+		width: 100%;
+		height: 200px;
+		object-fit: cover; 
+		border-radius: 15px;
+	}
+	.shop-item-button{
+		background: transparent;
+		font-size: 1vh;
+		padding: 8px 10px;
+	}
+	.shop-item-delivery{
+		font-size: 10px;
+	}
+}
+
+@media(max-width:576px) {
+	.shop-item{
+		max-width: 200px;
+	}
+
+	.shop-item-image{
+		width: 100%;
+		height: 200px;
+		object-fit: cover; 
+		border-radius: 15px;
+	}
+	.shop-get-item-button{
+		background: transparent;
+		font-size: 1vh;
+		padding: 8px 10px;
+	}
+}

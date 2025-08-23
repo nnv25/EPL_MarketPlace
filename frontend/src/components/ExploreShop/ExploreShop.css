@@ -1,0 +1,107 @@
+.explore-shop {
+    width: 100%;
+    position: relative;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .explore-shop-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    cursor: grab;
+    padding: 10px 0;
+    width: 100%;
+    min-width: calc(100% + 40px);
+    margin: 0 -20px;
+    transition: all 0.2s ease;
+    will-change: transform;
+  }
+  
+  .explore-shop-list.active-drag {
+    cursor: grabbing;
+    transform: scale(0.98);
+    transition: all 0.2s ease;
+  }
+  
+  .explore-shop-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .explore-shop-list.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+  }
+  
+  .explore-shop-list-item {
+    flex: 0 0 auto;
+    width: 300px;
+    min-width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+    user-select: none;
+    transition: transform 0.2s ease;
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .explore-shop-list.active-drag .explore-shop-list-item {
+    pointer-events: none;
+  }
+  
+  .shop-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+  }
+  
+  .carousel-button.left {
+    left: -15px;
+  }
+  
+  .carousel-button.right {
+    right: -15px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .explore-shop-list-item {
+      width: 250px;
+      min-width: 250px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .explore-shop-list-item {
+      width: 200px;
+      min-width: 200px;
+    }
+    
+    .carousel-button {
+      display: none;
+    }
+  }

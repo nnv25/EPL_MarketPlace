@@ -1,0 +1,180 @@
+.flower-display {
+    margin-top: 30px;
+}
+
+.flower-display h2 {
+    font-size: clamp(24px, 2vw, 36px); /* Ensures font size scales between 24px and 36px */
+    font-weight: 600;
+}
+
+.rating-hr {
+    margin-top: 4vh;
+}
+.rating-back-button{
+    background: transparent;
+    font-size: 12px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 2vh;
+  }
+.flower-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    row-gap: 50px;
+}
+
+/* Flex-based Container for Header and Info */
+.flower-display-top {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.flower-display-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-logo {
+    width: clamp(80px, 12vw, 120px); /* Scales logo width with device size */
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.shop-info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 15px;
+}
+
+.shop-name {
+    font-size: clamp(20px, 2.5vw, 30px); /* Responsive font size */
+    margin-right: 10px;
+}
+
+.star-logo-img {
+    margin-right: 10px;
+    width: clamp(20px, 2vw, 30px); /* Responsive star image size */
+}
+
+.shop-raiting {
+    font-size: clamp(18px, 2vw, 25px); /* Responsive rating size */
+}
+
+.shop-work {
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.shop-address {
+    padding-left: 15px;
+    font-size: clamp(15px, 1.5vw, 20px); /* Responsive font size */
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rating {
+    height: auto;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #000;
+}
+
+.rating-button {
+    font-size: clamp(12px, 1vw, 16px); /* Responsive button font size */
+    margin-bottom: 10px;
+}
+
+.rating-window {
+    width: 95%;
+    max-width: 1000px; /* Limits maximum width for large screens */
+    background-color: rgb(250, 250, 250);
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: 4px 5px 0.2px 0.2px rgb(233, 233, 233), -2px 4px rgb(233, 233, 233);
+}
+
+.rating-item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 4fr));
+    gap: 4vw;
+    margin-top: 1vh;
+}
+
+.rating-name {
+    font-size: clamp(14px, 1.3vw, 18px); /* Responsive font size */
+    margin-bottom: 1vh;
+}
+
+.rating-content {
+    margin-bottom: 1.5vh;
+}
+
+.rating-star {
+    margin-right: 0.5vw;
+    height: clamp(12px, 1.5vw, 24px); /* Responsive star height */
+}
+
+.rating-user-comment {
+    padding-right: 2vw;
+    margin-left: 1vw;
+}
+
+.flower-display hr {
+    margin: 15px 0;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+/* Adaptations for Medium Screens */
+@media (max-width: 992px) {
+    .flower-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+        row-gap: 30px;
+    }
+}
+
+/* Adaptations for Small Screens */
+@media (max-width: 576px) {
+    .shop-name {
+        font-size: clamp(16px, 4vw, 20px);
+        margin-right: 5px;
+    }
+
+    .shop-info {
+        padding-right: 15px;
+    }
+
+    .shop-raiting {
+        font-size: clamp(14px, 3vw, 18px);
+    }
+
+    .star-logo-img {
+        width: clamp(15px, 3vw, 20px);
+    }
+
+    .shop-address {
+        font-size: clamp(12px, 2.5vw, 15px);
+    }
+
+    .rating-button {
+        font-size: clamp(10px, 2.5vw, 14px);
+    }
+
+    .rating-item-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 2vw;
+    }
+}

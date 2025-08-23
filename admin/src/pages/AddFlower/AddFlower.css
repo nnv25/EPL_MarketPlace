@@ -1,0 +1,35 @@
+.uploaded-image-container {
+    position: relative;
+    display: inline-block;
+    margin: 0px 20px 0px 0px !important;
+}
+
+.uploaded-image {
+    max-width: 80px;
+}
+  
+.remove-image {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px 6px;
+}
+
+.add-text{
+    font-weight: bold;
+    color: black;
+}
+
+@media (max-width:900px) {
+    .add-text{
+        font-size: 14px;
+    }
+
+    .input-product{
+        width: 80%;
+    }
+}

@@ -1,0 +1,82 @@
+.register-shop-user {
+    max-width: 400px; /* Максимальная ширина блока */
+    margin: 2rem auto; /* Центрирование блока */
+    padding: 2rem; /* Внутренние отступы */
+    border-radius: 10px; /* Закругление углов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта глубины */
+    background-color: #fff; /* Цвет фона */
+}
+  
+.register-shop-user h2 {
+    text-align: center; /* Центрирование заголовка */
+    margin-bottom: 1.5rem; /* Отступ снизу */
+    font-size: 1.5rem; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+}
+  
+.register-shop-user form {
+    display: flex; /* Флекс-контейнер для вертикального выравнивания */
+    flex-direction: column; /* Вертикальная ориентация */
+    align-items: center;
+}
+  
+.register-shop-user input,
+.register-shop-user select {
+    padding: 0.75rem; /* Внутренние отступы */
+    margin-bottom: 1rem; /* Отступ снизу */
+    border: 1px solid #ddd; /* Цвет границы */
+    border-radius: 5px; /* Закругление углов */
+    font-size: 1rem; /* Размер шрифта */
+}
+  
+.register-shop-user input:focus,
+.register-shop-user select:focus {
+    border-color: #4a90e2; /* Цвет границы при фокусе */
+    outline: none; /* Убираем стандартное выделение */
+}
+  
+.register-shop-user button {
+    padding: 0.75rem; /* Внутренние отступы */
+    background-color: tomato; /* Цвет кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругление углов */
+    font-size: 1rem; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+    width: 200px;
+}
+  
+.register-shop-user button:hover {
+    background-color: #357ab8; /* Цвет кнопки при наведении */
+}
+  
+.register-shop-user p {
+    text-align: center; /* Центрирование сообщения */
+    color: #d9534f; /* Цвет сообщения об ошибке */
+    margin-top: 1rem; /* Отступ сверху */
+}
+
+.toggle-password {
+    max-width: 40px;
+    height: 40px;
+    right: 10px; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; 
+    color: gray;
+    margin-bottom: 10px;
+}
+  
+.toggle-password.active {
+    color: blue; /* Активное состояние */
+}
+  
+.toggle-password .toggle-icon {
+    pointer-events: none; /* Чтобы клик был только на кнопку */
+}
+  
+.toggle-password:hover {
+    color: black; /* Изменение цвета при наведении */
+}

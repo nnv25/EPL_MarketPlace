@@ -1,0 +1,105 @@
+.list-table-format {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #cacaca;
+    font-size: 13px;
+}
+
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.images-container img {
+    max-width: 50px;
+    height: auto;
+    object-fit: cover;
+}
+
+.list-table-format.title {
+    background-color: #f9f9f9;
+}
+
+.list-table-format p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.list-table-format .description {
+    max-width: 200px;
+    max-height: 60px; 
+    overflow-y: auto; 
+}
+
+@media (max-width:900px) {
+    .list-table-format {
+        grid-template-columns: 1.5fr 1fr 2fr 1fr 0.5fr;
+        gap: 10px;
+    }
+
+    .list-table-format p:nth-child(4){
+        display: none;
+    }
+
+    .list-table-format.title {
+        grid-template-columns: 1.5fr 1fr 2fr 1fr 0.5fr;
+    }
+
+    .list-table-format.title b:nth-child(4){
+        display: none;
+    }
+}
+
+@media (max-width:1200px) {
+    .list-table-format {
+        grid-template-columns: 1.5fr 1fr 2fr 0.5fr;
+        gap: 10px;
+    }
+
+    .list-table-format p:nth-child(4){
+        display: none;
+    }
+
+    .list-table-format p:nth-child(5){
+        display: none;
+    }
+
+    .list-table-format.title {
+        grid-template-columns: 1.5fr 1fr 2fr 0.5fr;
+    }
+
+    .list-table-format.title b:nth-child(4){
+        display: none;
+    }
+
+    .list-table-format.title b:nth-child(5){
+        display: none;
+    }
+}
+
+@media (max-width:576px) {
+    .list-table-format {
+        grid-template-columns: 1fr 1fr 0.5fr;
+        gap: 10px;
+    }
+
+    .list-table-format p:nth-child(3),
+    .list-table-format p:nth-child(5){
+        display: none;
+    }
+
+    .list-table-format.title {
+        grid-template-columns: 1fr 1fr 0.5fr;
+    }
+
+    .list-table-format.title b:nth-child(3),
+    .list-table-format.title b:nth-child(5){
+        display: none;
+    }
+}

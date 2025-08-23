@@ -1,0 +1,348 @@
+/*container*/
+.flower-display {
+    margin-top: 30px;
+    padding: 1rem;
+}
+
+/*shopinformation*/
+.flower-display-top {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.flower-display-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-logo {
+    width: clamp(80px, 12vw, 150px);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.shop-logo:hover {
+    transform: scale(1.05);
+}
+
+
+.flower-display-shop {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.shop-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.shop-name {
+    font-size: clamp(18px, 2.5vw, 30px);
+    margin: 0;
+    font-weight: bold;
+}
+
+.shop-raiting {
+    font-size: clamp(14px, 2vw, 20px);
+    display: flex;
+    align-items: center;
+}
+
+.star-logo-img {
+    width: 1rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
+/*flower information*/
+.flower-item-img-container{
+    max-width: 500px;
+    margin: 0px!important;
+}
+
+.shop-work,
+.shop-address {
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+.flower-item-button {
+    background-color: #FF4C24;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: clamp(14px, 2vw, 18px);
+    transition: background-color 0.2s;
+}
+
+.flower-item-button:hover {
+    background-color: #d8570f;
+}
+
+.flower-back-button{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 14px/*max(4vh, 14px)*/;
+    padding: 5px;
+    border-radius: 100%;
+    font-weight: bolder;
+    cursor: pointer;
+    background: white;
+    color: black;
+    border: 1px solid tomato;
+    transition: background 0.3s;
+}
+
+.flower {
+    margin-bottom: 2rem;
+}
+
+.flower-item-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.flower-item-img-container {
+    position: relative;
+}
+
+.slider-info {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
+}
+
+.slider-info::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.flower-info-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 0.5rem;
+}
+
+.slider-nav-info {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-dot-info {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    /*backgrobackground-color: black;und-color: rgba(241, 120, 7, 0.5);*/
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid tomato;
+}
+
+.slider-dot-info:hover {
+    /*background-color: rgba(0, 0, 0, 0.75);*/
+    background-color: rgb(19, 161, 243);
+}
+
+.flower-content-info {
+    max-width: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.1);
+}
+
+.flower-name {
+    font-size: clamp(20px, 3vw, 32px);
+    margin-bottom: 1rem;
+    word-break: break-word;
+}
+
+.flower-description {
+    font-size: clamp(14px, 2vw, 18px);
+    margin-bottom: 1rem;
+    color: #676d6d;
+    word-break: break-word;
+}
+
+.flower-cost {
+    font-size: clamp(16px, 2.5vw, 24px);
+    font-weight: bold;
+    color: #FF4C24;
+    margin-bottom: 1rem;
+}
+
+.flower-info-add-cart-button {
+    background-color: #FF4C24;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    font-size: clamp(14px, 2vw, 18px);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.flower-info-cart-added {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.info-added-number {
+    font-size: clamp(16px, 2vw, 20px);
+}
+.rating-back-button{
+  background: transparent;
+  font-size: 15px;
+  color: #49557e;
+  border: 1px solid tomato;
+  padding: 10px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.shop-info-divider{
+    margin-bottom: 5vh;
+}
+
+/* Target iPad Pro 12.9 (Portrait mode) */
+@media (min-width: 1024px) and (max-height: 1366px) {
+    /* Styles specific to iPad Pro 12.9 */
+    .flower-item-grid {
+        grid-template-columns: 1fr 1fr;  /* Example: three columns for iPad Pro */
+        gap: 3rem;
+    }
+    .flower-back-button {
+        font-size: max(2.5vh, 16px);
+    }
+    .shop-logo {
+        width: clamp(120px, 15vw, 150px);  /* Adjust logo size */
+    }
+    /*.flower-back-button{
+        width: max(10px, 8%);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-size: max(1.2vh, 14px);
+        padding: 5px;
+        border-radius: 100%;
+        font-weight: lighter;
+        cursor: pointer;
+        background: white;
+        color: black;
+        border: none;
+        transition: background 0.3s;
+    }*/
+}
+
+@media (min-width: 980px) {
+    .flower-item-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    /*.flower-back-button{
+        width: max(10px, 8%);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-size: max(3.5vh, 14px);
+        padding: 5px;
+        border-radius: 100%;
+        font-weight: lighter;
+        cursor: pointer;
+        background: white;
+        color: black;
+        border: none;
+        transition: background 0.3s;
+    }*/
+}
+@media (max-width: 979px) and (min-width: 768px)  {
+    .flower-item-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    /*.flower-back-button{
+        width: max(10px, 11%);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-size: max(2vh, 14px);
+        padding: 5px;
+        border-radius: 100%;
+        font-weight: lighter;
+        cursor: pointer;
+        background: white;
+        color: black;
+        border: none;
+        transition: background 0.3s;
+    }*/
+}
+
+@media (max-width: 576px) {
+    .flower-content{
+        max-height: 600px;
+    }
+
+    .flower-item-grid {
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+    }
+    /*.flower-back-button{
+        width: max(10px, 10%);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-size: max(2vh, 14px);
+        padding: 5px;
+        border-radius: 100%;
+        font-weight: lighter;
+        cursor: pointer;
+        background: white;
+        color: black;
+        border: none;
+        transition: background 0.3s;
+    }*/
+    .flower-display-top {
+        flex-direction: column;
+    }
+
+    .shop-logo {
+        width: clamp(120px, 20vw, 100px);
+    }
+
+    .flower-info-add-cart-button {
+        width: 100%;
+    }
+
+    .flower-content-info {
+        padding: 1rem 0.5rem;
+        max-height: 200px;
+    }
+}

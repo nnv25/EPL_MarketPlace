@@ -1,0 +1,20 @@
+.navbar2{
+	padding: 20px 8vw;
+	display: flex;
+	flex-direction: column;
+	background-color: #FFFFFF;
+	min-height: 66px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.navbar-menu{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	gap: 20px;
+	color:#000000;
+	background-color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+}
