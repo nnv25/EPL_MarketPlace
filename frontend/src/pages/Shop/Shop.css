@@ -1,10 +1,7 @@
 .shop-container {
     display: flex;
     flex-direction: column;
-}
-
-.shop-display {
-    padding-top: 0px;
+    padding-top: 40px;
 }
 
 .shop-info {
@@ -13,36 +10,40 @@
     justify-content: space-between;
 }
 
-.shop-center-information {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .shop-name {
-    font-size: max(1.5vw, 20px);
-    margin-right: 10px;
     font-family: "Lazurski";
     font-weight: bold;
     font-size: 24px;
 }
 
 .shop-rating {
-    font-size: max(1.2vw, 18px);
+    font-family: "Garamond";
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .star-logo-img {
     margin-right: 10px;
+    width: 20px;
+    height: 15px;
+}
+
+.shop-info-divider {
+    margin-bottom: 20px;
+}
+
+.shop-display {
+    padding-top: 0px;
 }
 
 .shop-display-top {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: 40px;
     gap: 30px;
     align-items: center;
-    justify-content: center;
-    box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+    justify-content: space-around;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
     border-radius: 30px;
     min-height: 184px;
     padding-left: 20px;
@@ -50,17 +51,31 @@
 
 .shop-display-logo {
     display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.shop-logo {
+    width: 144px;
+    height: 144px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
 }
 
 .shop-center-information {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .shop-work__information {
     margin-bottom:  20px;
+}
+
+.time-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    color: #666666;
 }
 
 .work-time-desc {
@@ -73,15 +88,46 @@
     font-size: 16px;
 }
 
+.shop-left__information {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+}
+
+.shop-icon__address {
+    display: flex;
+    align-items: flex-end;
+}
+
+.shop-address__information {
+    margin-bottom: 62px;
+}
+
 .shop-icon__time {
     display: flex;
     align-items: center;
 }
 
-.time-icon{
-    width: 20px;
-    height: 20px;
+.item-h3 {
+    font-family: "Lazurski";
+    font-size: 24px;
+    font-weight: bold;
 }
+
+.shop-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    row-gap: 50px;
+}
+
+
+
+
+
+
+
+
 
 .flower-display-shop {
     flex-grow: 1;
@@ -114,20 +160,9 @@
     text-align: center;
 }
 
-.flower-display-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 30px;
-    row-gap: 50px;
-}
 
-.shop-logo {
-    width: 144px;
-    height: 144px;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: 0.2s;
-}
+
+
 .flex{
     display: flex;
 }
@@ -205,9 +240,7 @@
     border: none;
     transition: background 0.3s;
 }
-.shop-info-divider{
-    margin-bottom: 5vh;
-}
+
 .shop-item-button:hover, .rating-button-shop:hover {
     background: darkred;
 }

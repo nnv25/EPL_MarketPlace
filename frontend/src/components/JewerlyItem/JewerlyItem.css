@@ -1,15 +1,16 @@
-.flower-item{
+.jewerly-item{
 	width: 100%;
 	margin: auto;
 	border-radius: 15px;
-	box-shadow: 0px 0px 10px #00000015;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
 	animation: fadeIn 1s;
 }
 
-.flower-item-img-container{
+.jewerly-item-img-container{
 	position: relative;
 	margin: 0 auto;
+  margin-bottom: 25px;
 }
 
 .slider {
@@ -22,7 +23,7 @@
     border-radius: 0.5rem;
 }
 
-.flower-item-image{
+.jewerly-item-image{
 	width: 100%; 
 	height: 200px; 
 	border-radius: 15px 15px 0 0;
@@ -54,60 +55,71 @@
 
 .slider-dot:hover,
 .slider-dot.active { /* Предполагается, что у вас есть класс active для активной точки */
-	background-color: rgb(19, 161, 243); /* Цвет при наведении и в активном состоянии */
+	background-color: #666666; /* Цвет при наведении и в активном состоянии */
 	opacity: 1; /* Увеличиваем непрозрачность при наведении и в активном состоянии */
+  width: 25px;
+  height: 8px;
+  border-radius: 30px;
 }
 
-.flower-item-info{
+.jewerly-item-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+
+.jewerly-item-info{
 	padding: 20px;
 }
 
-.flower-item-name-rating{
+.jewerly-item-name-rating{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 10px;
-	overflow: hidden; /* Скрывает излишний текст */
-    text-overflow: ellipsis; /* Добавляет многоточие */
-    white-space: nowrap; /* Текст будет в одной строке */
+	/*overflow: hidden; /* Скрывает излишний текст */
+  /*text-overflow: ellipsis; /* Добавляет многоточие */
+  /*white-space: nowrap; /* Текст будет в одной строке */
 }
 
-.flower-item-name-rating p{
-	font-size: 20px;
-	font-weight: 500;
+.jewerly-item-name-rating p{
+  font-family: "Lazurski";
+	font-size: 16px;
+  font-weight: bold;
 }
 
-.flower-item-name-rating img{
+.jewerly-item-name-rating img{
 	width: 70px;
 }
 
-.flower-item-desc{
-	color: #676767;
-	font-size: 12px;
-    overflow: hidden; /* Скрывает излишний текст */
-    text-overflow: ellipsis; /* Добавляет многоточие */
-    white-space: nowrap; /* Текст будет в одной строке */
-    max-width: 100%;
+.jewerly-item-desc{
+  font-family: "Open Sans";
+	color: #000000;
+	font-size: 13px;
+  /*overflow: hidden; /* Скрывает излишний текст */
+  /*text-overflow: ellipsis; /* Добавляет многоточие */
+  /*white-space: nowrap; /* Текст будет в одной строке */
+  max-width: 100%;
 }
 
-.flower-item-desc{
-	color: #676767;
-	font-size: 12px;
-    overflow: hidden; /* Скрывает излишний текст */
-    text-overflow: ellipsis; /* Добавляет многоточие */
-    white-space: nowrap; /* Текст будет в одной строке */
-    max-width: 100%;
-}
-
-.flower-item-price{
-	color: tomato;
+.jewerly-item-price{
+  font-family: "Lazurski";
+	color: #000000;
 	font-size: 22px;
-	font-weight: 500;
+	font-weight: bold;
 	margin: 10px 0px;
 }
 
-.flower-item-img-container .add{
-	width: 35px;
+.jewerly-item-img-container .add{
+	background-color: #666666;
+  width: 35px;
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
@@ -115,7 +127,7 @@
 	border-radius: 50%;
 }
 
-.flower-item-counter{
+.jewerly-item-counter{
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
@@ -127,6 +139,6 @@
 	background-color: white;
 }
 
-.flower-item-counter img{
+.jewerly-item-counter img{
 	width: 30px;
 }
