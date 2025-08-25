@@ -4,7 +4,7 @@ import { StoreContext } from "../../components/Context/StoreContext";
 import { useParams, Link } from "react-router-dom";
 import JewerlyItem from "../../components/JewerlyItem/JewerlyItem";
 import PageSelector from "../../components/PageSelector/PageSelector";
-import ShopInfo from '../../components/ShopInfo/ShopInfo' // Импортируйте новый компонент
+import ShopInfo from "../../components/ShopInfo/ShopInfo";
 import { assets } from "../../assets/assets_flowers";
 
 const Shop = () => {
@@ -64,7 +64,7 @@ const Shop = () => {
       </div>
       <hr className="shop-info-divider" />
       <div className="shop-display">
-        <ShopInfo shop={shop} url={url}/>
+        <ShopInfo shop={shop} url={url} />
         {/*<div className="shop-display-top">
           <div className="shop-display-logo">
             <Link to={`/shop/${shopId}`}>
@@ -144,7 +144,7 @@ const Shop = () => {
         onPageChange={handlePageChange}
       />
       <div className="h3-item">
-          <h3 className="item-h3">ОТЗЫВЫ О МАГАЗИНЕ</h3>
+        <h3 className="item-h3">ОТЗЫВЫ О МАГАЗИНЕ</h3>
       </div>
       <hr className="shop-info-divider" />
       <div className="rating-window">
@@ -167,49 +167,33 @@ const Shop = () => {
                 </div>
                 <div className="raiting-block">
                   <p className="raiting-number"> Оценка: </p>
-                  <img src={assets.daimond} alt="Рейтинг" className="raiting-star"/>
+                  <img
+                    src={assets.daimond}
+                    alt="Рейтинг"
+                    className="raiting-star"
+                  />
                   <p>{item.rating}</p>
                 </div>
               </div>
             </div>
-          </div>))}
-{/*
-          <div key={index} className="rating rating-item-grid ">
-            <div className=" ">
-              <div className="rating-name flex">
-                <p className="description">{item.userId.name}</p>
-                <p className="rating-user-comment">
-                  {formatDate(item.createdAt)} г.
-                </p>
-              </div>
-              <div className="flex">
-                <p className="rating-number">
-                  <img
-                    src={assets.Star}
-                    alt="Рейтинг"
-                    className="rating-star"
-                  />
-                </p>
-                <p>{item.rating}</p>
-                <p className="rating-user-comment">{item.comment}</p>
-              </div>
-            </div>
-            <div className="">
-              <div className="rating-name rating-shop-answer">
-                <p>Ответ магазина:</p>
-              </div>
-
-              <div className="rating-shop-answer-content">
-                <p>{item.storeComment}</p>
+            <div className="raiting-container__right">
+              <div className="right-top">
+                <div className="author-name">
+                  <p className="description">Ответ магазина</p>
+                </div>
+                <div className="comment-date">
+                  <p className="user-comment__date">{item.storeComment}</p>
+                </div>
               </div>
             </div>
           </div>
-        <Link to={`/shop/${shopId}/rating/`}>
-          <button className="shop-item-button rating-button-shop ">
-            Все отзывы
-          </button>
-        </Link>*/}
+        ))}
       </div>
+      <Link to={`/shop/${shopId}/rating/`}>
+        <button className="shop-item-button rating-button-shop ">
+          Все отзывы
+        </button>
+      </Link>
     </div>
   );
 };

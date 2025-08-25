@@ -227,6 +227,20 @@
     height: 16px
 }
 
+.raiting-container__right {
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /*
 .flex{
     display: flex;

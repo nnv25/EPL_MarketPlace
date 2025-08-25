@@ -30,6 +30,7 @@ import arrowUp from "./arrowUp.png";
 import footer_logo from "./footer_logo.png";
 import daimond from "./daimond.png";
 import payment_icon from "./payment-icon.png";
+import back_btn from "./back-btn.png";
 
 import flowers_1 from "./flowers_1.png";
 import flowers_2 from "./flowers_2.png";
@@ -76,6 +77,7 @@ export const assets = {
   payment_icon,
   address_icon,
   delivery_icon,
+  back_btn,
 };
 
 export const shop_list = [

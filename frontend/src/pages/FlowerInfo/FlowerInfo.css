@@ -1,8 +1,59 @@
 /*container*/
-.flower-display {
-    margin-top: 30px;
-    padding: 1rem;
+.shop-display {
+  margin-top: 30px;
+  padding: 1rem;
 }
+
+.shop-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shop-name {
+  font-family: "Lazurski";
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.shop-rating {
+  font-family: "Garamond";
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.star-logo-img {
+  margin-right: 10px;
+  width: 20px;
+  height: 15px;
+}
+
+.shop-info-divider {
+  margin-bottom: 20px;
+}
+
+.jewerly-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.jewerly-name__txt{
+  font-family: "Lazurski";
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.back-btn{
+  border: none;
+  background-color: #FFFFFF;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
 
 /*shopinformation*/
 .flower-display-top {
