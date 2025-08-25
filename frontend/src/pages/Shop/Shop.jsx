@@ -3,7 +3,8 @@ import "./Shop.css";
 import { StoreContext } from "../../components/Context/StoreContext";
 import { useParams, Link } from "react-router-dom";
 import JewerlyItem from "../../components/JewerlyItem/JewerlyItem";
-import PageSelector from "../../components/PageSelector/PageSelector"; // Импортируйте новый компонент
+import PageSelector from "../../components/PageSelector/PageSelector";
+import ShopInfo from '../../components/ShopInfo/ShopInfo' // Импортируйте новый компонент
 import { assets } from "../../assets/assets_flowers";
 
 const Shop = () => {
@@ -58,12 +59,13 @@ const Shop = () => {
         <p className="shop-name">{shop.name}</p>
         <p className="shop-rating">
           <img src={assets.daimond} alt="Рейтинг" className="star-logo-img" />
-          {shop.averageRating}
+          {shop.averageRating}({totalRatings})
         </p>
       </div>
       <hr className="shop-info-divider" />
       <div className="shop-display">
-        <div className="shop-display-top">
+        <ShopInfo shop={shop} url={url}/>
+        {/*<div className="shop-display-top">
           <div className="shop-display-logo">
             <Link to={`/shop/${shopId}`}>
               <img
@@ -121,7 +123,7 @@ const Shop = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div>*/}
         <div className="h3-item">
           <h3 className="item-h3">ТОВАРЫ</h3>
         </div>
@@ -132,7 +134,7 @@ const Shop = () => {
               <JewerlyItem key={flower._id} {...flower} />
             ))
           ) : (
-            <p>Нет доступных цветов в этом магазине.</p>
+            <p>Нет доступных товаров в этом магазине.</p>
           )}
         </div>
       </div>
@@ -141,15 +143,37 @@ const Shop = () => {
         totalPages={totalPages}
         onPageChange={handlePageChange}
       />
+      <div className="h3-item">
+          <h3 className="item-h3">ОТЗЫВЫ О МАГАЗИНЕ</h3>
+      </div>
+      <hr className="shop-info-divider" />
       <div className="rating-window">
-        <div>
-          <p className="shop-raiting">
-            <img src={assets.Star} alt="Рейтинг" className="star-logo-img" />
-            {shop.averageRating} ({totalRatings})
-          </p>
-        </div>
-        <h3 className="raiting-h3">Отзывы о магазине: "{shop.name}"</h3>
         {listRatings.map((item, index) => (
+          <div key={index} className="raiting-container">
+            <div className="raiting-container__left">
+              <div className="left-top">
+                <div className="author-name">
+                  <p className="description">{item.userId.name}</p>
+                </div>
+                <div className="comment-date">
+                  <p className="user-comment__date">
+                    {formatDate(item.createdAt)} г.
+                  </p>
+                </div>
+              </div>
+              <div className="comment-container">
+                <div className="comment-block">
+                  <p className="user-comment">{item.comment}</p>
+                </div>
+                <div className="raiting-block">
+                  <p className="raiting-number"> Оценка: </p>
+                  <img src={assets.daimond} alt="Рейтинг" className="raiting-star"/>
+                  <p>{item.rating}</p>
+                </div>
+              </div>
+            </div>
+          </div>))}
+{/*
           <div key={index} className="rating rating-item-grid ">
             <div className=" ">
               <div className="rating-name flex">
@@ -180,12 +204,11 @@ const Shop = () => {
               </div>
             </div>
           </div>
-        ))}
         <Link to={`/shop/${shopId}/rating/`}>
           <button className="shop-item-button rating-button-shop ">
             Все отзывы
           </button>
-        </Link>
+        </Link>*/}
       </div>
     </div>
   );

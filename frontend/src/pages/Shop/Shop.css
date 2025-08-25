@@ -121,14 +121,6 @@
     row-gap: 50px;
 }
 
-
-
-
-
-
-
-
-
 .flower-display-shop {
     flex-grow: 1;
     display: flex;
@@ -160,9 +152,82 @@
     text-align: center;
 }
 
+.rating-window {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
 
+.raiting-container{
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+.raiting-container__left{
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.left-top{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.description{
+    font-family: "Lazurski";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.user-comment__date{
+    font-family: "Lazurski";
+    font-size: 16px;
+}
+
+.comment-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-block{
+    margin-bottom: 15px;
+}
+
+.user-comment{
+    font-family: "OpenSans";
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.raiting-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.raiting-number{
+    font-family: "Lazurski";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.raiting-star{
+    width: 20px;
+    height: 16px
+}
+
+/*
 .flex{
     display: flex;
 }
@@ -182,7 +247,7 @@
     background-color: rgb(250, 250, 250);
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 4px 5px 0.2px 0.2px rgb(233, 233, 233), -2px 4px rgb(233, 233, 233);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .rating-information {
@@ -256,7 +321,7 @@
     width: clamp(95px, 12vw, 150px);
     cursor: pointer;
     /*margin-left: 15vw;*/
-    border-radius: 50%;
+    /*border-radius: 50%;
     transition: transform 0.2s;
 }
 
@@ -351,6 +416,6 @@
         cursor: pointer;
         border-radius: 50%;
         /*margin-left: 25vw;*/
-        transition: transform 0.2s;
+        /*transition: transform 0.2s;
     }
 }
