@@ -54,16 +54,86 @@
   cursor: pointer;
 }
 
+.jewerly-container{
+    max-width: 1160px;
+    min-height: 476px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.jewerly-item-img-container {
+    max-width: 398px;
+    min-height: 305px;
+}
+
+.jewerly-info-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 0.5rem;
+}
+.flower-item-img-container {
+    position: relative;
+}
+
+.slider-info {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
+}
+
+.slider-nav-info {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-dot-info {
+    width: 8px;
+    height: 8px;
+    border-radius: 30px;
+    background-color: #666666;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #666666;
+}
+
+.slider-dot-info:hover {
+    width: 25px;
+    height: 8px;
+    background-color: #666666;
+}
+
+.slider-info::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+
+
 
 /*shopinformation*/
-.flower-display-top {
+/*.flower-display-top {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 1rem;
     gap: 1rem;
 }
 
-.flower-display-logo {
+/*.flower-display-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +183,7 @@
     margin-right: 0.5rem;
 }
 /*flower information*/
-.flower-item-img-container{
+/*.flower-item-img-container{
     max-width: 500px;
     margin: 0px!important;
 }
@@ -145,7 +215,7 @@
     left: 20px;
     top: 10px;
     font-size: 14px/*max(4vh, 14px)*/;
-    padding: 5px;
+   /* padding: 5px;
     border-radius: 100%;
     font-weight: bolder;
     cursor: pointer;
@@ -181,9 +251,9 @@
 
 .slider-info::-webkit-scrollbar {
     display: none; /* Hide scrollbar */
-}
+/*}*/
 
-.flower-info-image {
+/*.flower-info-image {
     width: 100%;
     height: auto;
     max-height: 400px;
@@ -202,11 +272,10 @@
     transform: translateX(-50%);
 }
 
-.slider-dot-info {
+/*.slider-dot-info {
     width: 0.75rem;
     height: 0.75rem;
     border-radius: 50%;
-    /*backgrobackground-color: black;und-color: rgba(241, 120, 7, 0.5);*/
     background-color: black;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -214,11 +283,10 @@
 }
 
 .slider-dot-info:hover {
-    /*background-color: rgba(0, 0, 0, 0.75);*/
     background-color: rgb(19, 161, 243);
-}
+}*/
 
-.flower-content-info {
+/*.flower-content-info {
     max-width: 100%;
     padding: 1rem;
     background-color: #fff;
@@ -284,18 +352,18 @@
 }
 
 /* Target iPad Pro 12.9 (Portrait mode) */
-@media (min-width: 1024px) and (max-height: 1366px) {
+/*@media (min-width: 1024px) and (max-height: 1366px) {
     /* Styles specific to iPad Pro 12.9 */
-    .flower-item-grid {
+    /*.flower-item-grid {
         grid-template-columns: 1fr 1fr;  /* Example: three columns for iPad Pro */
-        gap: 3rem;
+        /*gap: 3rem;
     }
     .flower-back-button {
         font-size: max(2.5vh, 16px);
     }
     .shop-logo {
         width: clamp(120px, 15vw, 150px);  /* Adjust logo size */
-    }
+    /*}
     /*.flower-back-button{
         width: max(10px, 8%);
         position: absolute;
@@ -311,7 +379,7 @@
         border: none;
         transition: background 0.3s;
     }*/
-}
+/*}
 
 @media (min-width: 980px) {
     .flower-item-grid {
@@ -333,7 +401,7 @@
         border: none;
         transition: background 0.3s;
     }*/
-}
+/*}
 @media (max-width: 979px) and (min-width: 768px)  {
     .flower-item-grid {
         grid-template-columns: 1fr 1fr;
@@ -354,7 +422,7 @@
         border: none;
         transition: background 0.3s;
     }*/
-}
+/*}
 
 @media (max-width: 576px) {
     .flower-content{
@@ -380,7 +448,7 @@
         border: none;
         transition: background 0.3s;
     }*/
-    .flower-display-top {
+    /*.flower-display-top {
         flex-direction: column;
     }
 

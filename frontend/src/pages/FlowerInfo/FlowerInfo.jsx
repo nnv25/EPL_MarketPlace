@@ -57,6 +57,37 @@ const Shop = () => {
         <p className="jewerly-name__txt">{listflowersbyid.name}</p>
       </div>
       <hr className="shop-info-divider" />
+      <div className="jewerly-container">
+        <div className="jewerly-item-img-container">
+          <div className="flower-item-img-container">
+            <div className="slider-info" ref={sliderRef}>
+              {listflowersbyid.images.map((image, index) => (
+                <img
+                  key={index}
+                  className="jewerly-info-image"
+                  src={`${url}/flower-images/${image}`}
+                  alt={`flower-${index}`}
+                />
+              ))}
+            </div>
+            <div className="slider-nav-info">
+              {listflowersbyid.images.map((_, index) => (
+                <span
+                  key={index}
+                  onClick={() => handleNavigation(index)}
+                  className="slider-dot-info"
+                ></span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="right-container">
+
+        </div>
+      </div>
+
+
+
 
       <div className="flower-display-top">
         <div className="flower-display-logo">

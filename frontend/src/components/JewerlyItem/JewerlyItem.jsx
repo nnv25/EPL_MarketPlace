@@ -13,6 +13,7 @@ const JewerlyItem = ({ _id, name, price, description, images, shop }) => {
     const sliderWidth = sliderRef.current.clientWidth;
     sliderRef.current.scrollLeft = sliderWidth * index;
   };
+  
   return (
     <div className="jewerly-item">
       <div className="jewerly-item-img-container">
