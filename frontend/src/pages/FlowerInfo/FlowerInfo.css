@@ -53,21 +53,64 @@
   margin-right: 5px;
   cursor: pointer;
 }
-
-.jewerly-container{
-    max-width: 1160px;
-    min-height: 476px;
+/*jewerly information*/
+.jewerly {
+    margin-bottom: 40px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 25px;
+    padding: 20px 20px;
 }
 
-.jewerly-item-img-container {
+.jewerly-item-img-container{
     max-width: 398px;
-    min-height: 305px;
+    margin: 0px!important;
+    position: relative;
+}
+
+/*.flower-item-button {
+    background-color: #FF4C24;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: clamp(14px, 2vw, 18px);
+    transition: background-color 0.2s;
+}
+
+.flower-item-button:hover {
+    background-color: #d8570f;
+}
+
+.flower {
+    margin-bottom: 2rem;
+}
+
+.flower-item-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.flower-item-img-container {
+    position: relative;
+}*/
+
+.slider-info {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 40px;
+}
+
+.slider-info::-webkit-scrollbar {
+    display: none;
 }
 
 .jewerly-info-image {
@@ -78,19 +121,6 @@
     flex: 0 0 auto;
     scroll-snap-align: start;
     border-radius: 0.5rem;
-}
-.flower-item-img-container {
-    position: relative;
-}
-
-.slider-info {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 0.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
 }
 
 .slider-nav-info {
@@ -106,192 +136,76 @@
     width: 8px;
     height: 8px;
     border-radius: 30px;
-    background-color: #666666;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border: 1px solid #666666;
-}
-
-.slider-dot-info:hover {
-    width: 25px;
-    height: 8px;
-    background-color: #666666;
-}
-
-.slider-info::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
-}
-
-
-
-
-/*shopinformation*/
-/*.flower-display-top {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-    gap: 1rem;
-}
-
-/*.flower-display-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.shop-logo {
-    width: clamp(80px, 12vw, 150px);
-    cursor: pointer;
-    border-radius: 50%;
-    transition: transform 0.2s;
-}
-
-.shop-logo:hover {
-    transform: scale(1.05);
-}
-
-
-.flower-display-shop {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.shop-info {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.shop-name {
-    font-size: clamp(18px, 2.5vw, 30px);
-    margin: 0;
-    font-weight: bold;
-}
-
-.shop-raiting {
-    font-size: clamp(14px, 2vw, 20px);
-    display: flex;
-    align-items: center;
-}
-
-.star-logo-img {
-    width: 1rem;
-    height: auto;
-    margin-right: 0.5rem;
-}
-/*flower information*/
-/*.flower-item-img-container{
-    max-width: 500px;
-    margin: 0px!important;
-}
-
-.shop-work,
-.shop-address {
-    font-size: clamp(14px, 2vw, 18px);
-}
-
-.flower-item-button {
-    background-color: #FF4C24;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-size: clamp(14px, 2vw, 18px);
-    transition: background-color 0.2s;
-}
-
-.flower-item-button:hover {
-    background-color: #d8570f;
-}
-
-.flower-back-button{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    left: 20px;
-    top: 10px;
-    font-size: 14px/*max(4vh, 14px)*/;
-   /* padding: 5px;
-    border-radius: 100%;
-    font-weight: bolder;
-    cursor: pointer;
-    background: white;
-    color: black;
-    border: 1px solid tomato;
-    transition: background 0.3s;
-}
-
-.flower {
-    margin-bottom: 2rem;
-}
-
-.flower-item-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-.flower-item-img-container {
-    position: relative;
-}
-
-.slider-info {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 0.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
-}
-
-.slider-info::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
-/*}*/
-
-/*.flower-info-image {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    border-radius: 0.5rem;
-}
-
-.slider-nav-info {
-    display: flex;
-    gap: 0.5rem;
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/*.slider-dot-info {
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
     background-color: black;
     cursor: pointer;
     transition: background-color 0.3s;
-    border: 1px solid tomato;
 }
 
 .slider-dot-info:hover {
-    background-color: rgb(19, 161, 243);
-}*/
+    background-color: black;
+    width: 25px;
+    height: 8px;
+}
+/*right side*/
 
-/*.flower-content-info {
+.jewerly-content-info {
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     padding: 1rem;
     background-color: #fff;
     border-radius: 0.5rem;
-    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.1);
+}
+
+.jewerly-cost__container {
+    margin-bottom: 20px;
+}
+
+.jewerly-cost {
+    font-family: "Lazurski";
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.jewerly-info-add-cart-button {
+    background-color: #000000;
+    padding: 5px 5px;
+    color: white;
+    border: none;
+    font-size: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 214px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.basket-epl {
+    padding-right: 5px;
+}
+
+.flower-info-cart-added {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.info-added-number {
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.flower-description {
+    font-family: "Opensans";
+    font-size: 16px;
+    margin-bottom: 1rem;
+    color: #676d6d;
+    word-break: break-word;
 }
 
 .flower-name {
@@ -314,15 +228,7 @@
     margin-bottom: 1rem;
 }
 
-.flower-info-add-cart-button {
-    background-color: #FF4C24;
-    padding: 0.5rem 1rem;
-    color: white;
-    border: none;
-    font-size: clamp(14px, 2vw, 18px);
-    border-radius: 2rem;
-    cursor: pointer;
-}
+
 
 .flower-info-cart-added {
     display: flex;
