@@ -10,7 +10,7 @@
 .jewerly-item-img-container{
 	position: relative;
 	margin: 0 auto;
-	margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .slider {
@@ -30,7 +30,7 @@
 	object-fit: cover;
 	object-position: center; 
 	flex: 1 0 100%;
-    scroll-snap-align: start;
+  scroll-snap-align: start;
 }
 
 .slider-nav {

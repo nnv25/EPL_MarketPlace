@@ -1,26 +1,35 @@
-import { useContext, useState, useEffect } from 'react';
-import './PlaceOrder.css'
+import { useContext, useState, useEffect } from "react";
+import "./PlaceOrder.css";
 import InputMask from "react-input-mask";
-import { StoreContext } from '../../components/Context/StoreContext';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { StoreContext } from "../../components/Context/StoreContext";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const PlaceOrder = () => {
-
-  const {getTotalCartAmount,token,flowers_list,cartItems,url, getShopById, setShowLogin, clearCart } = useContext(StoreContext);
+  const {
+    getTotalCartAmount,
+    token,
+    flowers_list,
+    cartItems,
+    url,
+    getShopById,
+    setShowLogin,
+    clearCart,
+  } = useContext(StoreContext);
   const [data, setData] = useState({
-    firstName:"",
-    address:"",
-    phone:"",
-    comment:"",
-  })
+    firstName: "",
+    address: "",
+    phone: "",
+    comment: "",
+  });
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   // Состояние для хранения выбранного способа оплаты
-  const [selectedMethod, setSelectedMethod] = useState('наличными');
+  const [selectedMethod, setSelectedMethod] = useState("наличными");
   // Состояние для способа доставки
-  const [selectedDeliveryOption, setSelectedDeliveryOption] = useState('самовывоз');
+  const [selectedDeliveryOption, setSelectedDeliveryOption] =
+    useState("самовывоз");
 
   /*useEffect(() => {
     let totalDelivery = 0;
@@ -33,7 +42,7 @@ const PlaceOrder = () => {
           deliveryShops.add(shop._id); // Добавляем магазин в Set
           totalDelivery += shop.delivery_price; // Добавляем стоимость доставки один раз для магазина
         }*/
-      /*}
+  /*}
     });
 
     setTotalDeliveryPrice(totalDelivery);
@@ -42,15 +51,15 @@ const PlaceOrder = () => {
   const onChangeHandler = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setData(data=>({...data,[name]:value}));
-  }
+    setData((data) => ({ ...data, [name]: value }));
+  };
 
   // Функция для обработки изменений в выпадающем списке
   const handleChange = (event) => {
     setSelectedMethod(event.target.value);
   };
 
-  const placeOrder = async(event) => {
+  const placeOrder = async (event) => {
     event.preventDefault();
 
     // Находим первый товар в корзине, чтобы получить его магазин
@@ -73,7 +82,7 @@ const PlaceOrder = () => {
 
     let orderData = {
       userId: token,
-      shopId,  // Добавляем shopId в заказ
+      shopId, // Добавляем shopId в заказ
       address: data,
       items: orderItems,
       amount: getTotalCartAmount(),
@@ -83,32 +92,35 @@ const PlaceOrder = () => {
     };
 
     try {
-      const response = await axios.post(url + "/api/order/place", orderData, { headers: { token } });
+      const response = await axios.post(url + "/api/order/place", orderData, {
+        headers: { token },
+      });
       clearCart();
-      navigate('/myorders');
+      navigate("/myorders");
     } catch (error) {
       console.error("Ошибка при размещении заказа", error);
     }
   };
 
-  useEffect(()=>{
-    if(!token){
-      setShowLogin(true)
-      navigate('/cart')
-      return
+  useEffect(() => {
+    if (!token) {
+      setShowLogin(true);
+      navigate("/cart");
+      return;
     }
-    if(getTotalCartAmount()===0){
-      alert("Для оформления заказа Вам необходимо добавить товары")
-      navigate('/cart')
+    if (getTotalCartAmount() === 0) {
+      alert("Для оформления заказа Вам необходимо добавить товары");
+      navigate("/cart");
     }
-  },[token, getTotalCartAmount, navigate, setShowLogin])
-
+  }, [token, getTotalCartAmount, navigate, setShowLogin]);
 
   return (
     <form onSubmit={placeOrder} className="place-order">
       <div className="place-order-left">
-        <p>Информация о заказе</p>
+        <h2 className="place-order-h2">ИНФОРМАЦИЯ О ЗАКАЗЕ</h2>
+        <hr className="shop-info-divider" />
         <div className="multi-fields">
+          <span className="shop-info-txt">Имя заказчика</span>
           <input
             required
             name="firstName"
@@ -118,35 +130,30 @@ const PlaceOrder = () => {
             placeholder="Имя"
           />
         </div>
-        <input
-          required
-          name="address"
-          onChange={onChangeHandler}
-          value={data.address}
-          type="text"
-          placeholder="Адрес"
-        />
-        <InputMask
-          name="phone"
-          onChange={onChangeHandler}
-          value={data.phone}
-          mask="+7(999)999-99-99"
-          placeholder="Номер телефона"
-          required
-        />
-        <textarea 
-          name="comment" 
-          id=""
-          onChange={onChangeHandler}
-          value={data.comment}
-          placeholder='Комментарий к заказу'
-          maxLength={100}
-          >
-        </textarea>
-        <div className='delivery-information'>
-          <label className="delivery-information" htmlFor="delivery-method">
-            Выберите способ получения:
-          </label>
+        <div className="multi-fields">
+          <span className="shop-info-txt">Адрес</span>
+          <input
+            required
+            name="address"
+            onChange={onChangeHandler}
+            value={data.address}
+            type="text"
+            placeholder="Адрес"
+          />
+        </div>
+        <div className="multi-fields">
+          <span className="shop-info-txt">Номер телефона</span>
+          <InputMask
+            name="phone"
+            onChange={onChangeHandler}
+            value={data.phone}
+            mask="+7(999)999-99-99"
+            placeholder="Номер телефона"
+            required
+          />
+        </div>
+        <div className="multi-fields select-field">
+          <span className="shop-info-txt">Выберите способ получения</span>
           <select
             id="delivery-method"
             value={selectedDeliveryOption}
@@ -155,6 +162,35 @@ const PlaceOrder = () => {
             <option value="самовывоз">Самовывоз</option>
             <option value="доставка">Доставка</option>
           </select>
+        </div>
+        <div className="multi-fields select-field">
+          <span className="shop-info-txt">Выберите способ оплаты</span>
+          <select
+            id="payment-method"
+            value={selectedMethod}
+            onChange={handleChange}
+          >
+            <option value="наличными">Наличными</option>
+            <option value="переводом">Переводом</option>
+            <option value="банковской картой">Банковской картой</option>
+          </select>
+        </div>
+        <div className="multi-fields select-field">
+          <span className="shop-info-txt">Комментарий к заказу</span>
+          <textarea
+            name="comment"
+            id=""
+            onChange={onChangeHandler}
+            value={data.comment}
+            placeholder="Комментарий к заказу"
+            maxLength={100}
+          ></textarea>
+        </div>
+
+        <div className="delivery-information">
+          <label className="delivery-information" htmlFor="delivery-method">
+            Выберите способ получения:
+          </label>
           <p className="delivery-information">
             Выбранный способ получения: {selectedDeliveryOption}.
           </p>
@@ -168,15 +204,6 @@ const PlaceOrder = () => {
           <label className="payment-information" htmlFor="payment-method">
             Выберите способ оплаты:
           </label>
-          <select
-            id="payment-method"
-            value={selectedMethod}
-            onChange={handleChange}
-          >
-            <option value="наличными">Наличными</option>
-            <option value="переводом">Переводом</option>
-            <option value="банковской картой">Банковской картой</option>
-          </select>
           <p className="payment-information">
             Выбранный способ оплаты: {selectedMethod}
           </p>
@@ -184,11 +211,11 @@ const PlaceOrder = () => {
       </div>
       <div className="place-order-right">
         <div className="cart-total">
-          <h2 className='cart-total-h2'>Информация о стоимости</h2>
+          <h2 className="cart-total-h2">Информация о стоимости</h2>
           <div>
             <div className="cart-total-details">
-              <p className='place-order-inf'>Цена за товар</p>
-              <p className='place-order-inf'>{getTotalCartAmount()}₽</p>
+              <p className="place-order-inf">Цена за товар</p>
+              <p className="place-order-inf">{getTotalCartAmount()}₽</p>
             </div>
             <hr />
             {/*<div className="cart-total-details">
@@ -197,15 +224,17 @@ const PlaceOrder = () => {
             </div>
             <hr />*/}
             <div className="cart-total-details">
-              <p className='place-order-inf'>Итого</p>
-              <p className='place-order-inf'>{getTotalCartAmount()}₽</p>
+              <p className="place-order-inf">Итого</p>
+              <p className="place-order-inf">{getTotalCartAmount()}₽</p>
             </div>
           </div>
-          <button type="submit" className='order_button'>ЗАКАЗАТЬ</button>
+          <button type="submit" className="order_button">
+            ЗАКАЗАТЬ
+          </button>
         </div>
       </div>
     </form>
   );
-}
+};
 
-export default PlaceOrder
+export default PlaceOrder;

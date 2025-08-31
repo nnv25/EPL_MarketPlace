@@ -2,7 +2,7 @@ import "./ShopInfo.css";
 import { Link } from "react-router-dom";
 import { assets } from "../../assets/assets_flowers";
 
-const ShopInfo = ({shop, url}) => {
+const ShopInfo = ({ shop, url }) => {
   if (!shop) return null; // на всякий случай
 
   const shopId = shop._id; // берём id из объекта магазина
@@ -48,12 +48,14 @@ const ShopInfo = ({shop, url}) => {
         </div>
       </div>
       <div className="shop-left__information">
-        <div className="shop-icon__address">
-          <img className="time-icon" src={assets.address_icon} alt="" />{" "}
-          <p className="work-time-desc"> Адрес:</p>
-        </div>
-        <div className="shop-address__information">
-          <p className="shop-information__desc">{shop.address}</p>
+        <div className="shop-adress__container">
+          <div className="shop-icon__address">
+            <img className="time-icon" src={assets.address_icon} alt="" />{" "}
+            <p className="work-time-desc"> Адрес:</p>
+          </div>
+          <div className="shop-address__information">
+            <p className="shop-information__desc">{shop.address}</p>
+          </div>
         </div>
         <div className="shop-payment__information">
           <div className="shop-icon__time">
@@ -69,4 +71,4 @@ const ShopInfo = ({shop, url}) => {
   );
 };
 
-export default ShopInfo
+export default ShopInfo;

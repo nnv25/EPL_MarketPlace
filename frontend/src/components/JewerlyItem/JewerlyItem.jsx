@@ -13,7 +13,7 @@ const JewerlyItem = ({ _id, name, price, description, images, shop }) => {
     const sliderWidth = sliderRef.current.clientWidth;
     sliderRef.current.scrollLeft = sliderWidth * index;
   };
-  
+
   return (
     <div className="jewerly-item">
       <div className="jewerly-item-img-container">
@@ -51,7 +51,7 @@ const JewerlyItem = ({ _id, name, price, description, images, shop }) => {
           <div className="jewerly-item-counter">
             <img
               onClick={() => removeFromCart(_id)}
-              src={assets.remove_icon_red}
+              src={assets.remove_icon_black}
               alt=""
             />
             <p>{cartItems[_id]}</p>
@@ -59,7 +59,7 @@ const JewerlyItem = ({ _id, name, price, description, images, shop }) => {
               onClick={() => {
                 addToCart(_id);
               }}
-              src={assets.add_icon_green}
+              src={assets.add_icon_black}
               alt=""
             />
           </div>

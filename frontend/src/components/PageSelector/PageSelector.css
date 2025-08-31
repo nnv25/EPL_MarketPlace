@@ -6,7 +6,8 @@
 }
   
 .pagination button {
-    background-color: #666666;
+    font-family: "Lazurski";
+    background-color: black;
     color: white;
     border: none; 
     padding: 10px 20px;
@@ -22,11 +23,12 @@
 }
   
 .pagination button:disabled {
-    background-color: #cccccc; 
+    background-color: black; 
     cursor: not-allowed; 
 }
   
 .pagination span {
+    font-family: "Lazurski";
     font-size: 14px;
     font-weight: normal;
     color: #333;
@@ -34,7 +36,7 @@
 
 @media(max-width:768px) {
     .pagination button {
-        background-color: tomato;
+        background-color: black;
         color: white;
         border: none; 
         padding: 5px 10px;

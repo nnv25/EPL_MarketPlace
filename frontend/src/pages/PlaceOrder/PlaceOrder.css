@@ -9,28 +9,89 @@
 .place-order-left{
     width: 100%;
     max-width: max(30%);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 15px 15px;
 }
 
-.place-order-left .title{
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 50px;
+.place-order-h2{
+    font-family: "Lazurski";
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.place-order-left input{
-    margin-bottom: 15px;
+.multi-fields {
+    display: flex;
+    flex-direction: column;
+    gap:0;
+}
+
+.shop-info-txt{
+    font-family: "Lazurski";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.place-order-left input {
+    margin-bottom: 20px;
     width: 100%;
     padding: 10px;
     border: 1px solid #c5c5c5;
-    border-radius: 4px;
-    outline-color: tomato;
+    border-radius: 10px;
+    outline-color: black;
+    font-family: "Opensans";
+    font-size: 13px;
 }
 
-.place-order-left .multi-fields{
+.select-field{
+    margin-bottom: 10px;
+}
+
+#delivery-method {
+    font-family: "Opensans";
+    font-size: 13px;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    outline-color: black;
+    padding: 10px 10px;
+}
+
+#payment-method {
+    font-family: "Opensans";
+    font-size: 13px;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    outline-color: black;
+    padding: 10px 10px;
+}
+
+textarea {
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    outline-color: black;
+}
+
+textarea::placeholder {
+    font-family: "Opensans";
+    font-size: 13px;
+    padding: 10px 10px;
+}
+
+.payment-information{
+    font-family: "Lazurski";
+    font-size: 18px;
+}
+
+.delivery-information {
+    font-family: "Lazurski";
+    font-size: 18px;
+}
+
+/*.place-order-left .multi-fields{
     display: flex;
     gap: 10px;
 }
-
+*/
 .place-order-right{
     width: 100%;
     max-width: max(40%,500px);

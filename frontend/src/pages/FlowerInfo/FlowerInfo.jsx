@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef} from "react";
+import { useContext, useEffect, useRef } from "react";
 import "./FlowerInfo.css";
 import { StoreContext } from "../../components/Context/StoreContext";
 import { useParams, Link } from "react-router-dom";
@@ -82,38 +82,42 @@ const Shop = () => {
         </div>
         <div className="jewerly-content-info">
           <div className="jewerly-cost__container">
-            <p className="jewerly-cost">от {Math.floor(listflowersbyid.price).toLocaleString("ru-RU")} ₽</p>
+            <p className="jewerly-cost">
+              от {Math.floor(listflowersbyid.price).toLocaleString("ru-RU")} ₽
+            </p>
           </div>
           {!cartItems[flowerId] ? (
-            <button 
+            <button
               className="jewerly-info-add-cart-button"
               onClick={() => {
                 addToCart(flowerId);
               }}
               alt=""
-            > <img className="basket-epl" src={assets.basket_epl} alt="" />
+            >
+              {" "}
+              <img className="basket-epl" src={assets.basket_epl} alt="" />
               ДОБАВИТЬ В КОРЗИНУ
             </button>
           ) : (
-            <div className="flower-info-cart-added">
+            <div className="jewerly-info-cart-added">
               <img
                 onClick={() => removeFromCart(flowerId)}
-                src={assets.remove_icon_red}
+                src={assets.remove_icon_black}
                 alt=""
+                className="jewerly-button__img"
               />
               <p className="info-added-number">{cartItems[flowerId]}</p>
               <img
                 onClick={() => {
                   addToCart(flowerId);
                 }}
-                src={assets.add_icon_green}
+                src={assets.add_icon_black}
                 alt=""
+                className="jewerly-button__img"
               />
             </div>
           )}
-          <p className="flower-description">
-            {listflowersbyid.description}
-          </p>
+          <p className="jewerly-description">{listflowersbyid.description}</p>
         </div>
       </div>
     </div>

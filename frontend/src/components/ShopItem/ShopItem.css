@@ -85,6 +85,13 @@
 	margin-bottom: 10px;
 }
 
+.shop-item-rating__value{
+	font-family: "Garamond";
+	font-weight: bold;
+	color: black;
+	font-size: 20px;
+}
+
 .shop-item-img-container{
 	position: relative;
 }
@@ -127,7 +134,7 @@
 
 .star_logo{
 	width: 20px;
-	height: 20px;
+	height: 15px;
 	margin-right: 10px;
 }
 

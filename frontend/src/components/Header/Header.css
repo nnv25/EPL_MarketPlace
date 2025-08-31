@@ -25,19 +25,19 @@
 }
 
 .header_img {
-    width: 342px;
-    height: 180px;
+    width: 500px;
+    height: 250px;
 }
 
 .header-content__h1 {
-    font-size: 24px;
+    font-size: 42px;
     font-weight: normal;
     margin-bottom: 25px;
     font-family: "Lazurski";
 }
 
 .header-content__txt {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: normal;
     margin-bottom: 25px;
     font-family: "Lazurski";
@@ -46,81 +46,64 @@
 .author {
   bottom: 20px;
   right: 20px;
-  font-size: 16px;
+  font-size: 20px;
   text-align: right;
   font-family: "Lazurski";
 }
-/*
-.header h1 {
-  font-size: 3vw;
-  margin-bottom: 20px;
-}
-
-.header p {
-  font-size: 1.5vw;
-  line-height: 1.5;
-}
-
-.author {
-  margin-top: 20px;
-  font-style: italic;
-  font-size: 1.2vw;
-}
-
-
-@media(max-width:1200px) {
-    .header-contents h2{
-        font-weight: 500;
-        line-height: 60px;
-        color: white;
-        font-size: max(4.5vw, 22px);
-        text-align: center;
-    }
-}
-  
-@media(max-width:1050px) {
-    .header-contents{
-        max-width: 45%;
-    }
-}
 
 @media(max-width:992px) {
-    .header {
-        margin-top: 0;
-        margin-bottom: 15px;
+    .header_img {
+        width: 340px;
+        height: 160px;
+        }
+    
+    .header-content__h1 {
+        font-size: 24px;
+    }
+    
+    .header-content__txt {
+        font-size: 20px;
+    }
+    
+    .author {
+        font-size: 16px;
     }
 }
 
 @media(max-width:768px) {
-    .header {
-        margin-top: 0;
-        margin-bottom: 10px;
-    }
-    .header-contents{
-        max-width: 20%;
+    .header_img {
+        width: 280px;
+        height: 130px;
     }
 
-    .header-contents h2{
-        font-weight: 500;
-        line-height: 35px;
+    .header-content__h1 {
         font-size: 20px;
+    }
+
+    .header-content__txt {
+        font-size: 15px;
+    }
+
+    .author {
+        font-size: 12px;
     }
 }
 
 @media(max-width:576px) {
-    .header-contents h2{
-        font-weight: 500;
-        line-height: 25px;
+    .header_img {
+        width: 250px;
+        height: 110px;
+    }
+
+    .header-content__h1 {
         font-size: 15px;
     }
+
+    .header-content__txt {
+        font-size: 12px;
+    }
+
+    .author {
+        font-size: 11px;
+    }
 }
-  
-/*@media(max-width:750px) {
-    .header-contents{
-        max-width: 65%;
-    }
-  
-    .header-contents p{
-        display: none;
-    }
-}*/

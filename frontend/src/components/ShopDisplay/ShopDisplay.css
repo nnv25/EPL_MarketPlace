@@ -6,10 +6,11 @@
     font-family: "Lazurski";
     font-size: max(2vw, 24px);
     font-weight: bold;
-    text-align: center;
+    text-align: start;
 }
 
 .shop-display-list {
+    font-family: "Lazurski";
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-top: 30px;

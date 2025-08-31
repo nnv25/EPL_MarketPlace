@@ -31,7 +31,9 @@ import footer_logo from "./footer_logo.png";
 import daimond from "./daimond.png";
 import payment_icon from "./payment-icon.png";
 import back_btn from "./back-btn.png";
-import basket_epl from "./basket_epl.png"
+import basket_epl from "./basket_epl.png";
+import add_icon_black from "./add_icon_black_circle.png";
+import remove_icon_black from "./remove_icon_black_circle.png";
 
 import flowers_1 from "./flowers_1.png";
 import flowers_2 from "./flowers_2.png";
@@ -48,6 +50,7 @@ import address_icon from "./adress-icon.png";
 import delivery_icon from "./delivery_icon.png";
 
 import Star from "./Star.png";
+import trash_icon from "./trash_icon.png";
 
 export const assets = {
   logo_epl,
@@ -60,6 +63,7 @@ export const assets = {
   header_img,
   search_icon,
   rating_starts,
+  add_icon_black,
   add_icon_green,
   add_icon_white,
   remove_icon_red,
@@ -79,7 +83,9 @@ export const assets = {
   address_icon,
   delivery_icon,
   back_btn,
-  basket_epl
+  basket_epl,
+  remove_icon_black,
+  trash_icon,
 };
 
 export const shop_list = [

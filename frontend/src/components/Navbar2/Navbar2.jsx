@@ -1,22 +1,24 @@
-import React from 'react'
 import "./Navbar2.css";
-import { useContext, useState } from "react";
-import { assets } from "../../assets/assets_flowers"; // Импорт ресурсов
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { StoreContext } from "../Context/StoreContext";
 
 const Navbar2 = () => {
-const [menu, setMenu] = useState("Главная"); // Состояние для текущего меню
+  const [menu, setMenu] = useState("Главная"); // Состояние для текущего меню
 
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
-    <div className='navbar2'>
-        <ul className="navbar-menu">
+    <div className="navbar2">
+      <ul className="navbar-menu">
         {" "}
         {/* Меню */}
-        <Link to='/' onClick={() => setMenu("Главная")} className={menu === "Главная" ? "active" : ""}>Главная</Link>
+        <Link
+          to="/"
+          onClick={() => setMenu("Главная")}
+          className={menu === "Главная" ? "active" : ""}
+        >
+          Главная
+        </Link>
         <li
           onClick={() => setMenu("Магазины")} // Установка "Магазины" как активного меню
           className={menu === "Магазины" ? "active" : ""} // Класс для активного меню
@@ -43,7 +45,7 @@ const [menu, setMenu] = useState("Главная"); // Состояние для
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar2
+export default Navbar2;

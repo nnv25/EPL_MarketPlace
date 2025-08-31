@@ -5,7 +5,8 @@ import ShopItem from "../ShopItem/ShopItem";
 import PageSelector from "../PageSelector/PageSelector";
 
 const ShopDisplay = () => {
-  const { limited_shop_list, fetchShopListWithPagination, pagination } = useContext(StoreContext); // Получаем данные и функцию из контекста
+  const { limited_shop_list, fetchShopListWithPagination, pagination } =
+    useContext(StoreContext); // Получаем данные и функцию из контекста
   const [currentPage, setCurrentPage] = useState(1); // Состояние для текущей страницы
 
   // Функция для загрузки данных при изменении страницы
@@ -22,6 +23,7 @@ const ShopDisplay = () => {
   return (
     <div id="stores" className="shop-display">
       <h2>МАГАЗИНЫ</h2>
+      <hr className="shop-info-divider" />
       <div className="shop-display-list">
         {limited_shop_list.map((item, index) => (
           <ShopItem
@@ -46,4 +48,4 @@ const ShopDisplay = () => {
   );
 };
 
-export default ShopDisplay
+export default ShopDisplay;
