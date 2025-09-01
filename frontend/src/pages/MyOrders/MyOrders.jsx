@@ -85,52 +85,87 @@ const MyOrders = () => {
   return (
     <div className="my-orders">
       <h2 className="my-orders-h2">Мои Заказы</h2>
+      <hr className="shop-info-divider" />
       <div className="container">
-        {data.map((order, index) => {
-          const shop = getShopById(order.shop);
-          return (
-            <div key={index} className="my-orders-order">
-              <img src={assets.parcel_icon} alt="Иконка посылки" />
-              <p>{shop ? shop.name : "Магазин удален"}</p>
-              <p className="product-name">
-                {order.items.map((item, idx) => {
-                  return idx === order.items.length - 1
-                    ? `${item.name} x ${item.quantity}`
-                    : `${item.name} x ${item.quantity}, `;
-                })}
-              </p>
-              <p>{order.amount}.00₽</p>
-              <p>Количество: {order.items.length}</p>
-              <p>
-                Комментарий к заказу: {order.comment ? order.comment : "Отсутствует"}
-              </p>
-              <p>{formatDate(order.date)}</p>
-              <p>
-                <span>&#x25cf;</span>
-                <b className={getStatusClass(order.status)}>{order.status}</b>
-              </p>
-              <button onClick={() => fetchOrders(currentPage)}>Отследить заказ</button>
-              {shop && (
-                <button onClick={() => handleOpenReviewPopup(order.shop, order._id)}>
-                  Оставить отзыв
-                </button>
-              )}
+        <div className="cart-items">
+          <div className="cart-items-title2">
+            <div className="cart-item-wrapper2">
+              <p className="cart-items-name2">Магазин</p>
             </div>
-          );
-        })}
-      </div>
-      <PageSelector
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
-      {isReviewPopupOpen && currentShopId && currentOrderId && (
-        <ReviewPopup
-          shopId={currentShopId}
-          orderId={currentOrderId}
-          onClose={handleCloseReviewPopup}
+            <div className="cart-item-wrapper2">
+              <p className="cart-items-name2">Заказ</p>
+            </div>
+            <div className="cart-item-wrapper2">
+              <p className="cart-items-name2">Цена</p>
+            </div>
+            <div className="cart-item-wrapper2">
+              <p className="cart-items-name2">Количество</p>
+            </div>
+            <div className="cart-item-wrapper2">
+              <p className="cart-items-name2">Комментарий</p>
+            </div>
+            <div className="cart-item-wrapper2">
+              <p className="cart-items-name2">Дата</p>
+            </div>
+            <div className="cart-item-wrapper2">
+              <p className="cart-items-name2">Статус</p>
+            </div>
+            <div className="cart-item-wrapper2">
+              <p className="cart-items-name2">Отзыв</p>
+            </div>
+          </div>
+          <br />
+          {data.map((order, index) => {
+            const shop = getShopById(order.shop);
+            return (
+              <div key={index} className="cart-items-title2 my-orders-order">
+                <div className='order-shop__wrapper'>
+                  <img className='parcel-epl__img' src={assets.parcel_epl} alt="Иконка посылки" />
+                  <p className='order-txt'>{shop ? shop.name : "Магазин удален"}</p>
+                </div>
+                <p className="order-txt2">
+                  {order.items.map((item, idx) => {
+                    return idx === order.items.length - 1
+                      ? `${item.name}`
+                      : `${item.name}`;
+                  })}
+                </p>
+                <p className='order-txt'>{order.amount}.00 ₽</p> {/*посмотреть какие данные приходят че то непонятно судя по всему цифра*/}
+                <p className='order-txt'>Количество: {order.items.length}</p>
+                <p className='order-txt2'>
+                  {order.comment ? order.comment : "Отсутствует"}
+                </p>
+                <p className='order-txt'>{formatDate(order.date)}</p>
+                <div className='order-wrapper'>
+                  <p className='order-txt'>
+                    <span>&#x25cf;</span>
+                    <b className={getStatusClass(order.status)}>{order.status}</b>
+                  </p>
+                  <button className='order-button' onClick={() => fetchOrders(currentPage)}>Статус заказа</button>
+                </div>
+                {shop && (
+                  <button className='comment-btn' onClick={() => handleOpenReviewPopup(order.shop, order._id)}>
+                    <img className='comment-btn' src={assets.comment_btn} alt="" />
+                  </button>
+                )}
+              </div>
+            );
+          })}
+          <div className="cart-items__bottom"></div>
+        </div>
+        <PageSelector
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
         />
-      )}
+        {isReviewPopupOpen && currentShopId && currentOrderId && (
+          <ReviewPopup
+            shopId={currentShopId}
+            orderId={currentOrderId}
+            onClose={handleCloseReviewPopup}
+          />
+        )}
+      </div>
     </div>
   );
 };

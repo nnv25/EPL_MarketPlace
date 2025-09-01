@@ -1,111 +1,154 @@
 /* Задний фон для модального окна */
 .review-popup {
-    position: fixed; /* Окно фиксируется относительно экрана */
-    z-index: 1000; /* Устанавливаем на передний план */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Полная ширина экрана */
-    height: 100vh; /* Полная высота экрана */
-    background-color: rgba(0, 0, 0, 0.6); /* Темный полупрозрачный фон */
-    display: grid; /* Центрируем модальное окно */
+	position: fixed;
+	/* Окно фиксируется относительно экрана */
+	z-index: 1000;
+	/* Устанавливаем на передний план */
+	top: 0;
+	left: 0;
+	width: 100vw;
+	/* Полная ширина экрана */
+	height: 100vh;
+	/* Полная высота экрана */
+	background-color: rgba(0, 0, 0, 0.6);
+	/* Темный полупрозрачный фон */
+	display: grid;
+	/* Центрируем модальное окно */
 }
 
 /* Контейнер модального окна */
 .review-popup-container {
-    place-self: center;
-    width: max(25vw, 350px); /* Ширина окна зависит от экрана, минимально 350px */
-    background-color: #fff; /* Белый фон */
-    padding: 25px 30px; /* Внутренние отступы */
-    border-radius: 12px; /* Округление углов */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Тень для объема */
-    display: flex;
-    flex-direction: column;
-    gap: 25px; /* Расстояние между элементами */
-    font-size: 16px; /* Увеличенный шрифт для удобства чтения */
-    animation: fadeIn 0.4s ease-in-out; /* Плавная анимация появления */
+	place-self: center;
+	width: max(25vw, 350px);
+	/* Ширина окна зависит от экрана, минимально 350px */
+	background-color: #fff;
+	/* Белый фон */
+	padding: 25px 30px;
+	/* Внутренние отступы */
+	border-radius: 12px;
+	/* Округление углов */
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	/* Тень для объема */
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	/* Расстояние между элементами */
+	font-size: 16px;
+	/* Увеличенный шрифт для удобства чтения */
+	animation: fadeIn 0.4s ease-in-out;
+	/* Плавная анимация появления */
 }
 
 /* Заголовок окна */
 .review-popup-title {
-    display: flex;
-    justify-content: center; /* Центрируем заголовок по горизонтали */
-    align-items: center; /* Центрируем заголовок по вертикали */
-    position: relative; /* Относительное позиционирование для контейнера */
-    color: #333;
-    font-size: 15px;
-    font-weight: bold;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/* Центрируем заголовок по горизонтали */
+	align-items: center;
+	/* Центрируем заголовок по вертикали */
+	/*position: relative;*/
+	/* Относительное позиционирование для контейнера */
+	color: #333;
+	font-size: 15px;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+	gap: 5px;
+}
+
+.review-popup-h2 {
+	font-family: "Lazurski";
+	font-size: 25px;
+  font-weight: bold;
+}
+
+.close-button {
+	/*position: absolute;*/
+	/* Абсолютное позиционирование кнопки */
+	/*top: 10px;
+	/* Отступ сверху */
+	/*right: -10px;
+	/* Отступ справа */
+	background: none;
+	border: none;
+	font-size: 15px;
+	cursor: pointer;
+	color: #000;
+}
+
+.cross-icon__review {
+	width: 20px;
+	height: 20px;
 }
 
 /* Поле выбора рейтинга */
 label {
-    font-weight: bold; /* Жирный текст */
-    margin-bottom: 8px;
+	font-weight: bold;
+	/* Жирный текст */
+	margin-bottom: 8px;
 }
 
 /* Стили для полей ввода */
-select, textarea {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: #f9f9f9; /* Светлый фон для полей ввода */
-    transition: border-color 0.3s ease-in-out;
+select,
+textarea {
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 14px;
+	background-color: #f9f9f9;
+	/* Светлый фон для полей ввода */
+	transition: border-color 0.3s ease-in-out;
 }
 
 /* Ховер для полей */
-select:focus, textarea:focus {
-    outline: none;
-    border-color: #007bff; /* Синий цвет при фокусе */
+select:focus,
+textarea:focus {
+	outline: none;
+	border-color: #007bff;
+	/* Синий цвет при фокусе */
 }
 
 /* Кнопка отправки */
 .send-button {
-    padding: 10px 20px;
-    background-color: #007bff; /* Синий цвет кнопки */
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+	padding: 10px 20px;
+	background-color: #007bff;
+	/* Синий цвет кнопки */
+	color: white;
+	border: none;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
 }
 
 /* Ховер и активное состояние кнопки */
 .send-button {
-    background-color: #0056b3; /* Темно-синий при наведении */
+	background-color: #0056b3;
+	/* Темно-синий при наведении */
 }
 
 .send-button {
-    background-color: #00408a; /* Еще темнее при нажатии */
+	background-color: #00408a;
+	/* Еще темнее при нажатии */
 }
 
-.close-button {
-    position: absolute; /* Абсолютное позиционирование кнопки */
-    top: -10px; /* Отступ сверху */
-    right: -10px; /* Отступ справа */
-    background: none;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
-    color: #000;
-}
-  
+
+
 .close-button:hover {
-    color: red;
+	color: red;
 }
 
 /* Анимация появления модального окна */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
 }

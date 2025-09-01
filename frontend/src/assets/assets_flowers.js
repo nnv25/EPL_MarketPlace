@@ -34,6 +34,8 @@ import back_btn from "./back-btn.png";
 import basket_epl from "./basket_epl.png";
 import add_icon_black from "./add_icon_black_circle.png";
 import remove_icon_black from "./remove_icon_black_circle.png";
+import parcel_epl from "./parcel_epl.png";
+import comment_btn from "./comment_btn.png";
 
 import flowers_1 from "./flowers_1.png";
 import flowers_2 from "./flowers_2.png";
@@ -48,6 +50,10 @@ import flowers_10 from "./flowers_10.png";
 import time from "./time.png";
 import address_icon from "./adress-icon.png";
 import delivery_icon from "./delivery_icon.png";
+import cross_icon_epl from "./cross_icon_epl.png";
+import daimond_icon from "./daimond_icon.png";
+import daimond_outline from "./daimond_outline.png";
+import daimond_filled from "./daimond_filled.png";
 
 import Star from "./Star.png";
 import trash_icon from "./trash_icon.png";
@@ -86,6 +92,12 @@ export const assets = {
   basket_epl,
   remove_icon_black,
   trash_icon,
+  parcel_epl,
+  comment_btn,
+  cross_icon_epl,
+  daimond_icon,
+  daimond_outline,
+  daimond_filled,
 };
 
 export const shop_list = [

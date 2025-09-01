@@ -186,7 +186,6 @@ const PlaceOrder = () => {
             maxLength={100}
           ></textarea>
         </div>
-
         <div className="delivery-information">
           <label className="delivery-information" htmlFor="delivery-method">
             Выберите способ получения:
@@ -196,11 +195,11 @@ const PlaceOrder = () => {
           </p>
           {selectedDeliveryOption === "доставка" && (
             <p className="delivery-warning">
-              Необходимо уточнить стоимость доставки у магазина.
+              Необходимо уточнить стоимость доставки.
             </p>
           )}
         </div>
-        <div>
+        <div className="payment-container">
           <label className="payment-information" htmlFor="payment-method">
             Выберите способ оплаты:
           </label>
@@ -211,21 +210,21 @@ const PlaceOrder = () => {
       </div>
       <div className="place-order-right">
         <div className="cart-total">
-          <h2 className="cart-total-h2">Информация о стоимости</h2>
-          <div>
+          <h2 className="cart-total-h2">ИНФОРМАЦИЯ О СТОИМОСТИ</h2>
+          <hr className="shop-info-divider2" />
+          <div className="cart-total__container">
             <div className="cart-total-details">
               <p className="place-order-inf">Цена за товар</p>
-              <p className="place-order-inf">{getTotalCartAmount()}₽</p>
+              <p className="place-order-inf">{getTotalCartAmount().toLocaleString(
+                "ru-RU",
+                { minimumFractionDigits: 2 })} ₽</p>
             </div>
             <hr />
-            {/*<div className="cart-total-details">
-              <p className='place-order-inf'>Стоимость доставки</p>
-              <p className='place-order-inf'>{totalDeliveryPrice}₽</p>
-            </div>
-            <hr />*/}
             <div className="cart-total-details">
               <p className="place-order-inf">Итого</p>
-              <p className="place-order-inf">{getTotalCartAmount()}₽</p>
+              <p className="place-order-inf">{getTotalCartAmount().toLocaleString(
+                "ru-RU",
+                { minimumFractionDigits: 2 })} ₽</p>
             </div>
           </div>
           <button type="submit" className="order_button">
