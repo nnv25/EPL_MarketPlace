@@ -107,13 +107,22 @@ const Shop = () => {
                   <p className="user-comment">{item.comment}</p>
                 </div>
                 <div className="raiting-block">
-                  <p className="raiting-number"> Оценка: </p>
-                  <img
-                    src={assets.daimond}
-                    alt="Рейтинг"
-                    className="raiting-star"
-                  />
-                  <p className="raiting-number__left">{item.rating}</p>
+                  <p className="raiting-number">Оценка:</p>
+
+                  <div className="daimonds-container">
+                    {Array.from({ length: 5 }, (_, i) => i + 1).map((value) => (
+                      <img
+                        key={value}
+                        src={
+                          value <= Math.round(item.rating)
+                            ? assets.daimond_filled   // закрашенный
+                            : assets.daimond_outline  // пустой
+                        }
+                        alt="diamond"
+                        className="daimonds-img"
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -132,7 +141,7 @@ const Shop = () => {
       </div>
       <Link to={`/shop/${shopId}/rating/`}>
         <button className="shop-item-button rating-button-shop ">
-          Все отзывы
+          Посмотреть все отзывы
         </button>
       </Link>
     </div>

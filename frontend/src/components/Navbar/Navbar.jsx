@@ -55,12 +55,12 @@ const Navbar = () => {
                 <ul className="nav-profile-dropdown">
                   <li onClick={() => navigate("/myorders")}>
                     <img src={assets.bag_icon} alt="" />
-                    <p>Заказы</p>
+                    <p className="navbar-profile__txt">Заказы</p>
                   </li>
                   <hr />
                   <li onClick={logout}>
                     <img src={assets.logout_icon} alt="" />
-                    <p>Выйти</p>
+                    <p className="navbar-profile__txt">Выйти</p>
                   </li>
                 </ul>
               </div>

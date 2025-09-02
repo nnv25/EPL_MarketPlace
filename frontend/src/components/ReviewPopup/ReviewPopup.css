@@ -59,16 +59,10 @@
 .review-popup-h2 {
 	font-family: "Lazurski";
 	font-size: 25px;
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .close-button {
-	/*position: absolute;*/
-	/* Абсолютное позиционирование кнопки */
-	/*top: 10px;
-	/* Отступ сверху */
-	/*right: -10px;
-	/* Отступ справа */
 	background: none;
 	border: none;
 	font-size: 15px;
@@ -83,9 +77,22 @@
 
 /* Поле выбора рейтинга */
 label {
+	font-family: "Lazurski";
+	font-size: 20px;
 	font-weight: bold;
-	/* Жирный текст */
 	margin-bottom: 8px;
+}
+
+.daimonds-container {
+	display: flex; 
+	gap: 6px; 
+	cursor: pointer;
+}
+
+.daimonds-img {
+	width: 20px; 
+	height: 16px; 
+	transition: 0.2s;
 }
 
 /* Стили для полей ввода */
@@ -112,33 +119,17 @@ textarea:focus {
 /* Кнопка отправки */
 .send-button {
 	padding: 10px 20px;
-	background-color: #007bff;
+	background-color: black!important;
 	/* Синий цвет кнопки */
 	color: white;
 	border: none;
 	border-radius: 6px;
-	font-size: 16px;
-	font-weight: bold;
+	font-family: "OpenSans";
+	font-size: 13px;
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out;
 }
 
-/* Ховер и активное состояние кнопки */
-.send-button {
-	background-color: #0056b3;
-	/* Темно-синий при наведении */
-}
-
-.send-button {
-	background-color: #00408a;
-	/* Еще темнее при нажатии */
-}
-
-
-
-.close-button:hover {
-	color: red;
-}
 
 /* Анимация появления модального окна */
 @keyframes fadeIn {

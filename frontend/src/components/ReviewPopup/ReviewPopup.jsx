@@ -62,29 +62,21 @@ const ReviewPopup = ({ shopId, orderId, onClose }) => { // Добавлено or
         </div>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         {successMessage && <p className="success-message">{successMessage}</p>}
-        {/*<label htmlFor="rating">Выберите оценку:</label>
-        <select value={rating} onChange={(e) => setRating(Number(e.target.value))}>
-          <option value={1}>1</option>
-          <option value={2}>2</option>
-          <option value={3}>3</option>
-          <option value={4}>4</option>
-          <option value={5}>5</option>
-        </select>*/}
-        <div style={{ display: "flex", gap: "6px", cursor: "pointer" }}>
+        <div className='daimonds-container'>
           {diamonds.map((value) => (
             <img
-  key={value}
-  src={
-    value <= (hover || rating)
-      ? assets.daimond_filled   // закрашенный вариант
-      : assets.daimond_outline  // пустой вариант
-  }
-  alt="diamond"
-  style={{ width: "20px", height: "16px", transition: "0.2s" }}
-  onClick={() => setRating(value)}
-  onMouseEnter={() => setHover(value)}
-  onMouseLeave={() => setHover(0)}
-/>
+              key={value}
+              src={
+                value <= (hover || rating)
+                  ? assets.daimond_filled   // закрашенный вариант
+                  : assets.daimond_outline  // пустой вариант
+              }
+              alt="diamond"
+              className='daimonds-img'
+              onClick={() => setRating(value)}
+              onMouseEnter={() => setHover(value)}
+              onMouseLeave={() => setHover(0)}
+            />
           ))}
         </div>
         <label htmlFor="review">Ваш отзыв:</label>
@@ -98,7 +90,6 @@ const ReviewPopup = ({ shopId, orderId, onClose }) => { // Добавлено or
           onChange={(e) => setComment(e.target.value)}
           maxLength={maxLength}
         />
-
         <button className="send-button" type="submit">Отправить</button>
       </form>
     </div>

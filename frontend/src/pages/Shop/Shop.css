@@ -211,6 +211,10 @@
     font-weight: normal;
 }
 
+.rating-window {
+    margin-bottom: 20px;
+}
+
 .raiting-block{
     display: flex;
     flex-direction: row;
@@ -244,6 +248,19 @@
 
 .h3-item {
 	margin-top: 10px;
+}
+
+.shop-item-button, .rating-button-shop {
+    width: max(100px, 15%);
+    font-family: "OpenSans";
+    font-size: max(1.5vh, 14px);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: black;
+    color: white;
+    border: none;
+    transition: background 0.3s;
 }
 
 /*

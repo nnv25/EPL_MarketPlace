@@ -1,180 +1,201 @@
-.flower-display {
-    margin-top: 30px;
-}
-
-.flower-display h2 {
-    font-size: clamp(24px, 2vw, 36px); /* Ensures font size scales between 24px and 36px */
-    font-weight: 600;
-}
-
-.rating-hr {
-    margin-top: 4vh;
-}
-.rating-back-button{
-    background: transparent;
-    font-size: 12px;
-    color: #49557e;
-    border: 1px solid tomato;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-bottom: 2vh;
-  }
-.flower-display-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 30px;
-    row-gap: 50px;
-}
-
-/* Flex-based Container for Header and Info */
-.flower-display-top {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-}
-
-.flower-display-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.shop-logo {
-    width: clamp(80px, 12vw, 120px); /* Scales logo width with device size */
-    cursor: pointer;
-    border-radius: 50%;
-    transition: 0.2s;
+.overview-container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 40px;
 }
 
 .shop-info {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .shop-name {
-    font-size: clamp(20px, 2.5vw, 30px); /* Responsive font size */
-    margin-right: 10px;
+	font-family: "Lazurski";
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.shop-rating {
+	font-family: "Garamond";
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .star-logo-img {
-    margin-right: 10px;
-    width: clamp(20px, 2vw, 30px); /* Responsive star image size */
+	margin-right: 10px;
+	width: 20px;
+	height: 15px;
 }
 
-.shop-raiting {
-    font-size: clamp(18px, 2vw, 25px); /* Responsive rating size */
+.shop-info-divider {
+	margin-bottom: 20px;
 }
 
-.shop-work {
-    padding-left: 15px;
-    padding-bottom: 10px;
+.jewerly-name {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
-.shop-address {
-    padding-left: 15px;
-    font-size: clamp(15px, 1.5vw, 20px); /* Responsive font size */
+.jewerly-name__txt {
+	font-family: "Lazurski";
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
+.back-btn {
+	border: none;
+	background-color: #FFFFFF;
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	cursor: pointer;
 }
 
 .rating {
-    height: auto;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #000;
+	width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap:20px;
+	border-radius: 30px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+	margin-bottom: 10px;
 }
 
-.rating-button {
-    font-size: clamp(12px, 1vw, 16px); /* Responsive button font size */
-    margin-bottom: 10px;
+.raiting-container__left {
+	width: 530px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.left-top {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 10px;
+}
+
+.description {
+	font-family: "Lazurski";
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.user-comment__date {
+	font-family: "Lazurski";
+	font-size: 16px;
+}
+
+.comment-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.comment-block {
+	margin-bottom: 15px;
+}
+
+.user-comment {
+	font-family: "OpenSans";
+	font-size: 16px;
+	font-weight: normal;
 }
 
 .rating-window {
-    width: 95%;
-    max-width: 1000px; /* Limits maximum width for large screens */
-    background-color: rgb(250, 250, 250);
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: 4px 5px 0.2px 0.2px rgb(233, 233, 233), -2px 4px rgb(233, 233, 233);
+	margin-bottom: 20px;
 }
 
-.rating-item-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 4fr));
-    gap: 4vw;
-    margin-top: 1vh;
+.raiting-block {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
-.rating-name {
-    font-size: clamp(14px, 1.3vw, 18px); /* Responsive font size */
-    margin-bottom: 1vh;
+.raiting-number {
+	font-family: "Lazurski";
+	font-size: 20px;
+	font-weight: bold;
 }
 
-.rating-content {
-    margin-bottom: 1.5vh;
+.raiting-star {
+	width: 20px;
+	height: 16px
 }
 
-.rating-star {
-    margin-right: 0.5vw;
-    height: clamp(12px, 1.5vw, 24px); /* Responsive star height */
+.raiting-container__right {
+	width: 530px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-.rating-user-comment {
-    padding-right: 2vw;
-    margin-left: 1vw;
+.right-top {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
-.flower-display hr {
-    margin: 15px 0;
-    height: 2px;
-    background-color: #e2e2e2;
-    border: none;
+@media(max-width: 710px) {
+	.raiting-container {
+		flex-direction: column;
+	}
+
+	.raiting-container__left {
+		width: 350px;
+	}
+
+	.raiting-container__right {
+		width: 350px;
+	}
+
+	.item-h3{
+		font-size: 15px;
+	}
 }
 
-/* Adaptations for Medium Screens */
-@media (max-width: 992px) {
-    .flower-display-list {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 20px;
-        row-gap: 30px;
-    }
-}
+@media(max-width: 576px) {
+	.raiting-container__left {
+		width: 250px;
+	}
 
-/* Adaptations for Small Screens */
-@media (max-width: 576px) {
-    .shop-name {
-        font-size: clamp(16px, 4vw, 20px);
-        margin-right: 5px;
-    }
+	.raiting-container__right {
+		width: 250px;
+	}
 
-    .shop-info {
-        padding-right: 15px;
-    }
+	.description {
+		font-size: 15px;
+	}
+	
+	.user-comment__date {
+		font-size: 12px;
+	}
+	
+	.user-comment {
+		font-size: 12px;
+	}
+	
+	.raiting-number {
+		font-size: 15px;
+	}
+	.raiting-star {
+		width: 15px;
+		height: 15px
+	}
 
-    .shop-raiting {
-        font-size: clamp(14px, 3vw, 18px);
-    }
+	.raiting-number__left {
+		font-size: 12px;
+	}
 
-    .star-logo-img {
-        width: clamp(15px, 3vw, 20px);
-    }
-
-    .shop-address {
-        font-size: clamp(12px, 2.5vw, 15px);
-    }
-
-    .rating-button {
-        font-size: clamp(10px, 2.5vw, 14px);
-    }
-
-    .rating-item-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 2vw;
-    }
+	.daimonds-img{
+		width: 10px;
+		height: 9px;
+	}
 }

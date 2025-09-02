@@ -119,10 +119,10 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	background-color: #fff2ef;
+	background-color: white;
 	padding: 12px 25px;
 	border-radius: 4px;
-	border: 1px solid tomato;
+	border: 1px solid black;
 	outline: 2px solid white;
 	list-style: none;
 }
@@ -138,8 +138,14 @@
 	width: 20px;
 }
 
+.navbar-profile__txt{
+	font-family: "Lazurski";
+	font-size: 18px;
+    font-weight: normal;
+}
+
 .nav-profile-dropdown li:hover {
-	color: tomato;
+	color: black;
 }
 
 @media(max-width:1050px) {
