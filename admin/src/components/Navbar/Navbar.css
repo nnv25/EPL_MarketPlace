@@ -1,40 +1,66 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 4%;
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 4%;
+	background-color: black;
 }
 
-.navbar .logo{
+/*.navbar .logo{
     width: max(10%,80px);
+}*/
+.epl-logo {
+	width: 140px;
+	height: 45px;
 }
 
-.navbar .profile{
-    width: 40px;
+.navbar-menu__container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
 }
 
-.reset-shop-button{
-    max-width: 80px;
-    max-height: 30px;
-    border: none;
-    padding: 2px;
-    background-color: tomato;
-    color: black;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 10px;
+.reset-shop-button {
+	max-width: 80px;
+	max-height: 30px;
+	font-family: "Lazurski";
+	font-size: 10px;
+	border: none;
+	padding: 5px;
+	background-color: white;
+	color: black;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
-.exit-shop-button{
-    background-color: tomato;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 10px;
+/*.navbar .profile {
+	width: 40px;
+}
+
+.reset-shop-button {
+	max-width: 80px;
+	max-height: 30px;
+	border: none;
+	padding: 2px;
+	background-color: tomato;
+	color: black;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 10px;
+}
+
+.exit-shop-button {
+	background-color: tomato;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+	font-size: 10px;
 }
 
 .shop-information {
-    display: flex; /* Устанавливаем flexbox для выравнивания в строку */
-    align-items: center; /* Выравниваем элементы по центру вертикали */
-    gap: 10px; /* Добавляем расстояние между элементами */
-}
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}*/

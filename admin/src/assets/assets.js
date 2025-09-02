@@ -13,6 +13,7 @@ import add_moderator from './add_moderator.png'
 import user_multiple from './user_multiple.png'
 import Star from './Star.png'
 import balance from './balance.png'
+import epl_logo from './epl_logo.png'
 
 export const assets ={
     logo,
@@ -30,6 +31,7 @@ export const assets ={
     user_multiple,
     Star,
     balance,
+    epl_logo,
 }
 
 export const url = 'http://localhost:4000'

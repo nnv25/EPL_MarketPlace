@@ -1,29 +1,32 @@
 .balance-txt {
-    font-size: 14px;
-    font-weight: bold;
+	font-family: "Lazurski";
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .low-balance {
-    color: red; /* Для баланса ниже 500 рублей */
+	color: red;
+	/* Для баланса ниже 500 рублей */
 }
 
 .high-balance {
-    color: green; /* Для баланса 500 рублей и выше */
+	color: white;
+	/* Для баланса 500 рублей и выше */
 }
 
 .error {
-    color: tomato;
-    font-weight: bold;
+	color: tomato;
+	font-weight: bold;
 }
 
 .balance-information p {
-    margin: 0;
-    padding: 5px 0;
+	margin: 0;
+	padding: 5px 0;
 }
 
 @media(max-width:568px) {
-    .balance-txt {
-        font-size: 10px;
-        font-weight: normal;
-    }
+	.balance-txt {
+		font-size: 10px;
+		font-weight: normal;
+	}
 }

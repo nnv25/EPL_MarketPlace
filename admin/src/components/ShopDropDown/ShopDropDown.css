@@ -1,32 +1,37 @@
+.shopdropdown-container {
+	width: 450px;
+	height: 40px;
+}
+
 .shop-dropdown {
-    width: 18%;
-    padding: 10px;
-    font-size: 12px;
-    color: #333;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: all 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	padding: 10px;
+	font-size: 12px;
+	color: #333;
+	background-color: #f8f8f8;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	outline: none;
+	transition: all 0.3s ease;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .shop-dropdown:focus {
-    border-color: #007bff;
-    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+	border-color: #007bff;
+	box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
 }
 
 .shop-dropdown option {
-    padding: 10px;
-    background-color: #fff;
-    color: #333;
+	padding: 10px;
+	background-color: #fff;
+	color: #333;
 }
 
 .shop-dropdown option:hover {
-    background-color: #007bff;
-    color: #fff;
+	background-color: #007bff;
+	color: #fff;
 }
 
 .shop-dropdown option:disabled {
-    color: #aaa;
+	color: #aaa;
 }

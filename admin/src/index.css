@@ -1,10 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@font-face {
+  font-family: 'Garamond';
+  src: url('/fonts/Garamond-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Garamond';
+  src: url('/fonts/Garamond-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Lazurski через локальные файлы */
+@font-face {
+  font-family: 'Lazurski';
+  src: url('/fonts/Lazurski-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lazurski';
+  src: url('/fonts/Lazurski-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lazurski';
+  src: url('/fonts/Lazurski-Cyrillic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  unicode-range: U+0400-04FF; /* для кириллицы */
+}
 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Outfit;
+  font-family: 'Open Sans', 'Lazurski', 'Garamond', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body{
