@@ -12,56 +12,56 @@ const Sidebar = () => {
       <div className="sidebar-options">
         {!selectedShop && (
           <NavLink to="/addshop" className="sidebar-option">
-            <img className='sidebar-img' src={assets.door_enter} alt="" />
-            <p>Добавить магазин</p>
+            <img className='sidebar-img' src={assets.shop_add} alt="" />
+            <p className='option-txt'>Добавить магазин</p>
           </NavLink>
         )}
         <NavLink to="/addflower" className="sidebar-option">
-          <img className='sidebar-img' src={assets.add_icon} alt="" />
-          <p>Добавить товар</p>
+          <img className='sidebar-img' src={assets.item_add} alt="" />
+          <p className='option-txt'>Добавить товар</p>
         </NavLink>
         <NavLink to="/updateshop" className="sidebar-option">
-          <img className='sidebar-img' src={assets.edit} alt="" />
-          <p>Редактировать информацию о магазине</p>
+          <img className='sidebar-img' src={assets.edit_icon} alt="" />
+          <p className='option-txt'>Редактировать информацию о магазине</p>
         </NavLink>
         {!selectedShop && (
           <NavLink to="/shoplist" className="sidebar-option">
-            <img className='sidebar-img' src={assets.shop_list} alt="" />
-            <p>Список магазинов</p>
+            <img className='sidebar-img' src={assets.shop_icon} alt="" />
+            <p className='option-txt'>Список магазинов</p>
           </NavLink>
         )}
         <NavLink to="/flowerlist" className="sidebar-option">
-          <img className='sidebar-img' src={assets.flower_list} alt="" />
+          <img className='sidebar-img' src={assets.item_icon} alt="" />
           <p>Список товаров</p>
         </NavLink>
         <NavLink to="/orders" className="sidebar-option">
-          <img className='sidebar-img' src={assets.cart} alt="" />
-          <p>Список заказов</p>
+          <img className='sidebar-img' src={assets.order_icon2} alt="" />
+          <p className='option-txt'>Список заказов</p>
         </NavLink>
         <NavLink to="/ratinglist" className="sidebar-option">
-          <img className='sidebar-img' src={assets.Star} alt="" />
-          <p>Список отзывов</p>
+          <img className='sidebar-img' src={assets.review_icon} alt="" />
+          <p className='option-txt'>Список отзывов</p>
         </NavLink>
         {!selectedShop && (
           <NavLink to="/administrator" className="sidebar-option">
-            <img className='sidebar-img' src={assets.add_moderator} alt="" />
-            <p>Добавление модераторов</p>
+            <img className='sidebar-img' src={assets.moderator_icon} alt="" />
+            <p className='option-txt'>Добавление модераторов</p>
           </NavLink>
         )}
         {!selectedShop && (
           <NavLink to="/userlist" className="sidebar-option">
-            <img className='sidebar-img' src={assets.user_multiple} alt="" />
-            <p>Список пользователей</p>
+            <img className='sidebar-img' src={assets.user_icon} alt="" />
+            <p className='option-txt'>Список пользователей</p>
           </NavLink>
         )}
         <NavLink to="/balance" className="sidebar-option">
-          <img className='sidebar-img' src={assets.balance} alt="" />
-          <p>Пополнение баланса</p>
+          <img className='sidebar-img' src={assets.balance_icon} alt="" />
+          <p className='option-txt'>Пополнение баланса</p>
         </NavLink>
         {!selectedShop && (
           <NavLink to="/balance-update" className="sidebar-option">
-            <img className='sidebar-img' src={assets.balance} alt="" />
-            <p>Исправление баланса магазина</p>
+            <img className='sidebar-img' src={assets.balance_edit_icon} alt="" />
+            <p className='option-txt'>Исправление баланса магазина</p>
           </NavLink>
         )}
       </div>

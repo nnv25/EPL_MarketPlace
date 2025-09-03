@@ -35,6 +35,23 @@
 	border-radius: 5px;
 }
 
+.exit-shop-button {
+  background-color: black;     /* чёрный фон кнопки */
+  border: none;
+  border-radius: 50%;          /* круглая кнопка */
+  padding: 10px;               /* внутренний отступ */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-icon {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) invert(1); /* делает иконку белой */
+}
+
 /*.navbar .profile {
 	width: 40px;
 }

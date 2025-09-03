@@ -47,11 +47,12 @@ const BalanceInformation = ({ selectedShop }) => {
         <p className="error">{error}</p>
       ) : balance !== null ? (
         <p
-          className={`balance-txt ${
-            balance < 500 ? "low-balance" : "high-balance"
-          }`}
+          className={`balance-txt ${balance < 500 ? "low-balance" : "high-balance"
+            }`}
         >
-          Баланс: {balance} ₽
+          Баланс: {balance.toLocaleString("ru-RU", {
+            minimumFractionDigits: 2,
+          })} ₽
         </p>
       ) : (
         <p>Выберите магазин, чтобы увидеть баланс.</p>

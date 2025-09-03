@@ -4,6 +4,7 @@
     border: 1.5px solid #a9a9a9;
     border-top: 0;
     font-size: max(1vw,10px);
+    margin-bottom: 30px;
 }
 
 .sidebar-img{
@@ -22,12 +23,17 @@
 .sidebar-option{
     display: flex;
     align-items: center;
-    gap: 12px;
+    margin-right: 10px;
+    gap: 10px;
     border: 1px solid #a9a9a9;
-    border-right: 0;
-    padding: 8px 10px;
-    border-radius: 3px 0px 0px 3px;
+    padding: 20px 10px;
+    border-radius: 15px;
     cursor: pointer;
+}
+
+.option-txt{
+    font-family: "Lazurski";
+    font-size: 20px;
 }
 
 .sidebar-option.active{

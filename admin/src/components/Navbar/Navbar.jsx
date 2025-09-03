@@ -35,7 +35,11 @@ const Navbar = ({ onLogout }) => {
 					<BalanceInformation selectedShop={selectedShop} />
 				</div>
 			)}
-			<button className='exit-shop-button' onClick={onLogout}>Выйти</button> {/* Используем onLogout */}
+			<div className='exit-container'>
+				<button className='exit-shop-button' onClick={onLogout}>
+					<img src={assets.logout_icon} alt="Выйти" className="logout-icon" />
+				</button>
+			</div>
 		</div>
 	);
 };

@@ -78,8 +78,12 @@ const AddShop = () => {
 
   return (
     <div className="add">
+      <div className="h2-item">
+        <h3 className="item-h2">ДОБАВИТЬ МАГАЗИН</h3>
+      </div>
+      <hr className="shop-info-divider" />
       <form className="flex-col" onSubmit={handleSubmit}>
-        <div className="add-img-upload flex-col">
+        {/*<div className="add-img-upload flex-col">
           <p className='shop-title'>Загрузить логотип магазина</p>
           <label htmlFor="image">
             <img src={image ? URL.createObjectURL(image) : assets.upload_area} alt="Upload area" />
@@ -91,8 +95,8 @@ const AddShop = () => {
             required 
             hidden
           />
-        </div>
-        <div className="add-shop-name flex-col">
+        </div>*/}
+        <div className="add-shop-name">
           <p className='shop-title'>Название магазина</p>
           <input
             type="text"
@@ -101,41 +105,54 @@ const AddShop = () => {
             onChange={(e) => setShopName(e.target.value)}
             placeholder="Введите название магазина"
             required
+            className='addshop-input'
           />
         </div>
-        <div className="add-shop-worktime flex-col">
+        <div className="add-shop-worktime">
           <label className='shop-title' htmlFor="weekdays">Часы работы:</label>
           <div className='shop-worktime'>
-            <p className='shop-title-time'>Понедельник-пятница</p>
-            <input
-              className='worktime-input'
-              id="weekdays"
-              value={workTimeWeekdays}
-              onChange={(e) => setWorkTimeWeekdays(e.target.value)}
-              placeholder="Пн-Пт"
-              required
-            />
-            <p className='shop-title-time'>Суббота</p>
-            <input
-              className='worktime-input'
-              id="saturday"
-              value={workTimeSaturday}
-              onChange={(e) => setWorkTimeSaturday(e.target.value)}
-              placeholder="Суббота"
-              required
-            />
-            <p className='shop-title-time'>Воскресенье</p>
-            <input
-              className='worktime-input'
-              id="sunday"
-              value={workTimeSunday}
-              onChange={(e) => setWorkTimeSunday(e.target.value)}
-              placeholder="Воскресенье"
-              required
-            />
+            <div className='addshop-container'>
+              <div className='shop-time-container'>
+                <p className='shop-title-time'>Пн-пт</p>
+              </div>
+              <input
+                id="weekdays"
+                value={workTimeWeekdays}
+                onChange={(e) => setWorkTimeWeekdays(e.target.value)}
+                placeholder="Введите часы работы магазина в будни"
+                required
+                className='addshop-input'
+              />
+            </div>
+            <div className='addshop-container'>
+              <div className='shop-time-container'>
+                <p className='shop-title-time'>Суб</p>
+              </div>
+              <input
+                className='addshop-input'
+                id="saturday"
+                value={workTimeSaturday}
+                onChange={(e) => setWorkTimeSaturday(e.target.value)}
+                placeholder="Введите часы работы магазина в субботу"
+                required
+              />
+            </div>
+            <div className='addshop-container'>
+              <div className='shop-time-container'>
+                <p className='shop-title-time'>Вск</p>
+              </div>
+              <input
+                className='addshop-input'
+                id="saturday"
+                value={workTimeSaturday}
+                onChange={(e) => setWorkTimeSaturday(e.target.value)}
+                placeholder="Введите часы работы магазина в воскресенье"
+                required
+              />
+            </div>
           </div>
         </div>
-        <div className="add-shop-address flex-col">
+        <div className="add-shop-address">
           <p className='shop-title'>Адрес</p>
           <input
             type="text"
@@ -144,9 +161,22 @@ const AddShop = () => {
             onChange={(e) => setAddress(e.target.value)}
             placeholder="Введите адрес магазина"
             required
+            className='addshop-input'
           />
         </div>
-        <div className="add-shop-phone flex-col">
+        <div className="add-shop-address">
+          <p className='shop-title'>Страна</p>
+          <input
+            type="text"
+            name="address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            placeholder="Выберите страну" /*нужно добавить страну*/
+            required
+            className='addshop-input'
+          />
+        </div>
+        <div className="add-shop-phone">
           <p className='shop-title'>Телефон</p>
           <InputMask
             type="tel"
@@ -156,9 +186,10 @@ const AddShop = () => {
             mask="+7(999)999-99-99"
             placeholder="Введите телефон магазина"
             required
+            className='addshop-input'
           />
         </div>
-        <div className="add-shop-delivery flex-col">
+        <div className="add-shop-delivery">
           <p className='shop-title'>Доставка:</p>
           <select
             name="delivery"
@@ -166,7 +197,7 @@ const AddShop = () => {
             onChange={(e) => setDelivery(e.target.value === 'true')}
           >
             <option value="false">Нет</option>
-            <option value="true">Есть</option>
+            <option value="true">Да</option>
           </select>
           {/*delivery && (
             <div className="delivery-price flex-col">
@@ -182,9 +213,10 @@ const AddShop = () => {
             </div>
           )*/}
         </div>
-        <div className="add-shop-payment-form flex-col">
+        <div className="add-shop-payment-form">
           <p className='shop-title'>Форма оплаты:</p>
-          <label className='payment-form-desc'>
+          <div className='payment-select'>
+            <label className='payment-form-desc'>
             <input
               className='payment-form'
               type="checkbox"
@@ -214,6 +246,7 @@ const AddShop = () => {
             />
             Онлайн перевод
           </label>
+          </div>
         </div>
         <button type="submit" className="add-btn">Добавить магазин</button>
       </form>
