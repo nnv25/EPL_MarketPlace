@@ -21,7 +21,7 @@ const shopSchema = new mongoose.Schema({
             message: props => `Цена доставки должна быть положительным числом.`
         }
     },*/
-    payment_form: { type: String, required: true },
+    payment_form: { type: [String], required: true, default: [] },
     createdAt: { type: String },
     isBanned: { type: Boolean, default: false },
     balance: {type: Number, default:0 },

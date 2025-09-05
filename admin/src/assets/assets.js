@@ -26,6 +26,7 @@ import moderator_icon from './moderator_icon.png'
 import user_icon from './user_icon.png'
 import balance_icon from './balance_icon.png'
 import balance_edit_icon from './balance_edit_icon.png'
+import shop_logo_load from './shop_logo_load.png'
 
 export const assets ={
     logo,
@@ -56,6 +57,7 @@ export const assets ={
     user_icon,
     balance_icon,
     balance_edit_icon,
+    shop_logo_load,
 }
 
 export const url = 'http://localhost:4000'

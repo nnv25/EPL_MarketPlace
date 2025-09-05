@@ -175,7 +175,20 @@ const updateShop = async (req, res) => {
     if (req.body.address) updatedData.address = req.body.address;
     if (req.body.phone) updatedData.phone = req.body.phone;
     if (req.body.delivery !== undefined) updatedData.delivery = req.body.delivery === 'true';
-    if (req.body.payment_form) updatedData.payment_form = req.body.payment_form;
+    if ('payment_form' in req.body) {
+        let paymentForm = req.body.payment_form;
+
+        // Если пришёл один пункт — будет строка
+        if (!Array.isArray(paymentForm)) {
+            paymentForm = [paymentForm];
+        }
+
+        // Перезаписываем целиком массив
+        updatedData.payment_form = paymentForm;
+    } else {
+        // Если поле вообще не пришло, то очищаем (если так нужно)
+        updatedData.payment_form = [];
+    }
     if (req.body['work_time.weekdays'] || req.body['work_time.saturday'] || req.body['work_time.sunday']) {
         updatedData.work_time = {
             weekdays: req.body['work_time.weekdays'] || '',

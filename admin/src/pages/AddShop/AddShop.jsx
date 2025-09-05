@@ -83,19 +83,6 @@ const AddShop = () => {
       </div>
       <hr className="shop-info-divider" />
       <form className="flex-col" onSubmit={handleSubmit}>
-        {/*<div className="add-img-upload flex-col">
-          <p className='shop-title'>Загрузить логотип магазина</p>
-          <label htmlFor="image">
-            <img src={image ? URL.createObjectURL(image) : assets.upload_area} alt="Upload area" />
-          </label>
-          <input 
-            type="file" 
-            id="image" 
-            onChange={(e) => setImage(e.target.files[0])} 
-            required 
-            hidden
-          />
-        </div>*/}
         <div className="add-shop-name">
           <p className='shop-title'>Название магазина</p>
           <input
@@ -144,8 +131,8 @@ const AddShop = () => {
               <input
                 className='addshop-input'
                 id="saturday"
-                value={workTimeSaturday}
-                onChange={(e) => setWorkTimeSaturday(e.target.value)}
+                value={workTimeSunday}
+                onChange={(e) => setWorkTimeSunday(e.target.value)}
                 placeholder="Введите часы работы магазина в воскресенье"
                 required
               />
@@ -247,6 +234,19 @@ const AddShop = () => {
             Онлайн перевод
           </label>
           </div>
+        </div>
+        <div className="add-img-upload flex-col">
+          <p className='shop-title'>Загрузить логотип магазина</p>
+          <label htmlFor="image">
+            <img src={image ? URL.createObjectURL(image) : assets.shop_logo_load} alt="Upload area" />
+          </label>
+          <input 
+            type="file" 
+            id="image" 
+            onChange={(e) => setImage(e.target.files[0])} 
+            required 
+            hidden
+          />
         </div>
         <button type="submit" className="add-btn">Добавить магазин</button>
       </form>
